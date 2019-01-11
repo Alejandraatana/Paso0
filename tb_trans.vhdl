@@ -10,7 +10,8 @@ end entity tb_trans;
 architecture beh of tb_trans is
 component trans is
 port(
-        clk_50m: in std_logic;
+            clk: in std_logic;
+          reset: in std_logic;
            clkl: out std_logic;
             add: out std_logic_vector(7 downto 0);
         datout0: out std_logic_vector(6 downto 0); 
@@ -25,6 +26,7 @@ port(
 end component trans;
 
 signal btnclk:std_logic:='0';
+signal btnreset:std_logic:='1';
 signal ledclk:std_logic:='1';
 signal ledadd:std_logic_vector(7 downto 0);
 signal led0:std_logic_vector(6 downto 0);
@@ -39,7 +41,8 @@ begin
 
 tra:trans
    port map(
-         clk_50m=>btnclk,
+         clk=>btnclk,
+           reset=>btnreset,
             clkl=>ledclk,
              add=>ledadd,
          datout0=>led0,
@@ -57,5 +60,13 @@ process
       btnclk<='1';
    wait for 10 ns;
       btnclk<='0';
+end process;
+
+process
+   begin
+   wait for 200 ns;
+      --btnreset<='0';
+   wait for 10 ns;
+      btnreset<='1';
 end process;
 end architecture beh;

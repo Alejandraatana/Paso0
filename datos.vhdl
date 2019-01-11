@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 entity datos is
    port(
-           dir: in std_logic_vector(7 downto 0);
+           add: in std_logic_vector(7 downto 0);
            dat:out std_logic_vector(15 downto 0)
        );
 end entity datos;
@@ -267,5 +267,5 @@ signal dato: data:=
                 others=>(others=>'0')
                 );
 begin
-   dat<=dato(to_integer(unsigned(dir)));
+   dat<=dato(to_integer(unsigned(add)));
 end architecture beh;

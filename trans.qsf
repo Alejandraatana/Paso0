@@ -5,11 +5,14 @@ set_global_assignment -name DEVICE EP2C35F672C6
 set_global_assignment -name TOP_LEVEL_ENTITY trans
 set_global_assignment -name VHDL_FILE trans.vhdl 
 set_global_assignment -name VHDL_FILE datos.vhdl
+set_global_assignment -name VHDL_FILE control.vhdl
 set_global_assignment -name VHDL_FILE resultado.vhdl
 set_global_assignment -name VHDL_FILE bib_mult.vhdl
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_file
 
 set_location_assignment  PIN_N2 -to clk_50m
+set_location_assignment  PIN_G26 -to reset
+set_location_assignment  PIN_AF22 -to resetl
 set_location_assignment  PIN_AE22 -to clkl
 set_location_assignment  PIN_AD12 -to add[7]
 set_location_assignment  PIN_AE12 -to add[6]
