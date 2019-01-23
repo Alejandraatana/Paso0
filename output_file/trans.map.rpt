@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trans
-Fri Jan 11 17:17:22 2019
+Wed Jan 23 11:38:46 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -45,15 +45,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 11 17:17:21 2019              ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 23 11:38:45 2019              ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; trans                                              ;
 ; Top-level Entity Name              ; trans                                              ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 7,127                                              ;
-;     Total combinational functions  ; 7,127                                              ;
-;     Dedicated logic registers      ; 41                                                 ;
-; Total registers                    ; 41                                                 ;
+; Total logic elements               ; 7,140                                              ;
+;     Total combinational functions  ; 7,132                                              ;
+;     Dedicated logic registers      ; 50                                                 ;
+; Total registers                    ; 50                                                 ;
 ; Total pins                         ; 68                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
@@ -158,17 +158,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; trans.vhdl                       ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/trans.vhdl     ;         ;
-; datos.vhdl                       ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/datos.vhdl     ;         ;
-; control.vhdl                     ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/control.vhdl   ;         ;
-; resultado.vhdl                   ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/resultado.vhdl ;         ;
-; bib_mult.vhdl                    ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/bib_mult.vhdl  ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; trans.vhdl                       ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/trans.vhdl      ;         ;
+; datos.vhdl                       ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/datos.vhdl      ;         ;
+; control.vhdl                     ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/control.vhdl    ;         ;
+; resultado.vhdl                   ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/resultado.vhdl  ;         ;
+; bib_mult.vhdl                    ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/bib_mult.vhdl   ;         ;
+; contMod11.vhdl                   ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/contMod11.vhdl  ;         ;
+; contMod250.vhdl                  ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/contMod250.vhdl ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -176,41 +178,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 7,127                 ;
+; Estimated Total logic elements              ; 7,140                 ;
 ;                                             ;                       ;
-; Total combinational functions               ; 7127                  ;
+; Total combinational functions               ; 7132                  ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 2970                  ;
-;     -- 3 input functions                    ; 4120                  ;
-;     -- <=2 input functions                  ; 37                    ;
+;     -- 4 input functions                    ; 2974                  ;
+;     -- 3 input functions                    ; 4119                  ;
+;     -- <=2 input functions                  ; 39                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 7096                  ;
-;     -- arithmetic mode                      ; 31                    ;
+;     -- normal mode                          ; 7100                  ;
+;     -- arithmetic mode                      ; 32                    ;
 ;                                             ;                       ;
-; Total registers                             ; 41                    ;
-;     -- Dedicated logic registers            ; 41                    ;
+; Total registers                             ; 50                    ;
+;     -- Dedicated logic registers            ; 50                    ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
 ; I/O pins                                    ; 68                    ;
 ; Embedded Multiplier 9-bit elements          ; 0                     ;
 ; Maximum fan-out node                        ; resultado:RES|cont[5] ;
 ; Maximum fan-out                             ; 492                   ;
-; Total fan-out                               ; 24480                 ;
-; Average fan-out                             ; 3.38                  ;
+; Total fan-out                               ; 24544                 ;
+; Average fan-out                             ; 3.39                  ;
 +---------------------------------------------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; |trans                     ; 7127 (317)        ; 41 (27)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |trans               ; work         ;
-;    |control:CTRL|          ; 15 (15)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|control:CTRL  ; work         ;
-;    |datos:DAT|             ; 365 (365)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT     ; work         ;
-;    |resultado:RES|         ; 6430 (6430)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |trans                     ; 7132 (317)        ; 50 (27)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |trans                    ; work         ;
+;    |contMod11:CONT11|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod11:CONT11   ; work         ;
+;    |contMod250:CONT250|    ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250 ; work         ;
+;    |control:CTRL|          ; 4 (4)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|control:CTRL       ; work         ;
+;    |datos:DAT|             ; 366 (366)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT          ; work         ;
+;    |resultado:RES|         ; 6430 (6430)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -329,6 +333,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +---------------------------------------+------------------------------------+
 ; Register name                         ; Reason for Removal                 ;
 +---------------------------------------+------------------------------------+
+; control:CTRL|enable250                ; Merged with control:CTRL|enable11  ;
 ; control:CTRL|addRes[7]                ; Merged with control:CTRL|addDat[7] ;
 ; control:CTRL|addRes[6]                ; Merged with control:CTRL|addDat[6] ;
 ; control:CTRL|addRes[5]                ; Merged with control:CTRL|addDat[5] ;
@@ -337,7 +342,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; control:CTRL|addRes[2]                ; Merged with control:CTRL|addDat[2] ;
 ; control:CTRL|addRes[1]                ; Merged with control:CTRL|addDat[1] ;
 ; control:CTRL|addRes[0]                ; Merged with control:CTRL|addDat[0] ;
-; Total Number of Removed Registers = 8 ;                                    ;
+; Total Number of Removed Registers = 9 ;                                    ;
 +---------------------------------------+------------------------------------+
 
 
@@ -346,12 +351,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 41    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 50    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 40    ;
+; Number of registers using Asynchronous Clear ; 48    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 22    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -361,7 +366,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; control:CTRL|ini                       ; 3       ;
+; control:CTRL|ini                       ; 2       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -381,7 +386,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:51     ;
+; Top            ; 00:00:48     ;
 +----------------+--------------+
 
 
@@ -404,7 +409,7 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Fri Jan 11 17:16:17 2019
+    Info: Processing started: Wed Jan 23 11:37:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trans -c trans
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file trans.vhdl
@@ -422,6 +427,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file resulta
 Info (12021): Found 2 design units, including 0 entities, in source file bib_mult.vhdl
     Info (12022): Found design unit 1: bib_mult
     Info (12022): Found design unit 2: bib_mult-body
+Info (12021): Found 2 design units, including 1 entities, in source file contMod11.vhdl
+    Info (12022): Found design unit 1: contMod11-beh
+    Info (12023): Found entity 1: contMod11
+Info (12021): Found 2 design units, including 1 entities, in source file contMod250.vhdl
+    Info (12022): Found design unit 1: contMod250-beh
+    Info (12023): Found entity 1: contMod250
 Info (12127): Elaborating entity "trans" for the top level hierarchy
 Info (12128): Elaborating entity "datos" for hierarchy "datos:DAT"
 Info (12128): Elaborating entity "resultado" for hierarchy "resultado:RES"
@@ -434,6 +445,8 @@ Info (10041): Inferred latch for "cont[4]" at resultado.vhdl(22)
 Info (10041): Inferred latch for "cont[5]" at resultado.vhdl(22)
 Info (10041): Inferred latch for "cont[6]" at resultado.vhdl(22)
 Info (10041): Inferred latch for "cont[7]" at resultado.vhdl(22)
+Info (12128): Elaborating entity "contMod11" for hierarchy "contMod11:CONT11"
+Info (12128): Elaborating entity "contMod250" for hierarchy "contMod250:CONT250"
 Info (12128): Elaborating entity "control" for hierarchy "control:CTRL"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "datos:DAT|dato" is uninferred due to asynchronous read logic
@@ -7094,517 +7107,517 @@ Warning (13012): Latch resultado:RES|res~3117 has unsafe behavior
 Warning (13012): Latch resultado:RES|res~3837 has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1289 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1529 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1049 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1769 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1544 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1304 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1064 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1784 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1514 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1274 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1034 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1754 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1319 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1559 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1079 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1799 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2504 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2489 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2474 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2519 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2249 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2264 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2234 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2279 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2024 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2009 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1994 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2039 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2729 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2744 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2714 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2759 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~344 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~329 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~314 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~359 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~569 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~584 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~554 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~599 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~89 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~104 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~74 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~119 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~824 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~809 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~794 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~839 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3224 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3464 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2984 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3704 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3449 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3209 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2969 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3689 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3194 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3434 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2954 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3674 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3479 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3239 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2999 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3719 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2309 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1349 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~389 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3269 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1364 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2324 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~404 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3284 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1334 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2294 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~374 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3254 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2339 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1379 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~419 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3299 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1589 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1604 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1574 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1619 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2564 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2549 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2534 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2579 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~644 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~629 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~614 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~659 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3509 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3524 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3494 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3539 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2069 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2084 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2054 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2099 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1124 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1109 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1094 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1139 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~149 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~164 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~134 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~179 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3044 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3029 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3014 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3059 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2804 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1844 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~884 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3764 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1829 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2789 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~869 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3749 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2774 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1814 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~854 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3734 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1859 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2819 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~899 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3779 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2429 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2444 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2414 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2459 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1484 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1469 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1454 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1499 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~509 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~524 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~494 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~539 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3404 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3389 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3374 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3419 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1244 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1229 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1214 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1259 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2189 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2204 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2174 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2219 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~269 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~284 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~254 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~299 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3164 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3149 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3134 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3179 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1949 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1964 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1934 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1979 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1004 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~989 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~974 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1019 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~29 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~44 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~14 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~59 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2924 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2909 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2894 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2939 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1724 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1709 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1694 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1739 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2669 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2684 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2654 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2699 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~749 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~764 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~734 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~779 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3644 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3629 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3614 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3659 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2609 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2369 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2129 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2849 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2384 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2624 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2144 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2864 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2354 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2594 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2114 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2834 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2639 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2399 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2159 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2879 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1424 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1664 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1184 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1904 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1649 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1409 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1169 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1889 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1394 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1634 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1154 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1874 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1679 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1439 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1199 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1919 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~689 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~449 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~209 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~929 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~464 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~704 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~224 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~944 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~434 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~674 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~194 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~914 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~719 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~479 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~239 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~959 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3344 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3584 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3104 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3824 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3569 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3329 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3089 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3809 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3314 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3554 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3074 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3794 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3599 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3359 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3119 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~3839 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~1528 has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control:CTRL|addDat[5]
 Warning (13012): Latch resultado:RES|res~2488 has unsafe behavior
@@ -8150,14 +8163,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "datout7[6]" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7216 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7229 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 66 output pins
-    Info (21061): Implemented 7148 logic cells
+    Info (21061): Implemented 7161 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7711 warnings
     Info: Peak virtual memory: 369 megabytes
-    Info: Processing ended: Fri Jan 11 17:17:22 2019
-    Info: Elapsed time: 00:01:05
-    Info: Total CPU time (on all processors): 00:01:01
+    Info: Processing ended: Wed Jan 23 11:38:46 2019
+    Info: Elapsed time: 00:00:58
+    Info: Total CPU time (on all processors): 00:00:57
 
 

@@ -44,17 +44,43 @@ component control is
 port(
         clk:  in std_logic;
       reset:  in std_logic;
+     cont11:  in std_logic_vector(3 downto 0);
+    cont250:  in std_logic_vector(7 downto 0);
+   enable11: out std_logic;
+  enable250: out std_logic;
          wr: out std_logic;
        addD: out std_logic_vector(7 downto 0);
        addR: out std_logic_vector(7 downto 0)
     );
 end component control;
 
+component contMod11 is
+   port(
+           clk: in std_logic;
+        enable: in std_logic;
+         reset: in std_logic;
+          cont:out std_logic_vector(3 downto 0)
+       );
+end component contMod11;
+
+component contMod250 is
+   port(
+           clk: in std_logic;
+        enable: in std_logic;
+         reset: in std_logic;
+          cont:out std_logic_vector(7 downto 0)
+        );
+end component contMod250;
+
 signal addD:std_logic_vector(7 downto 0):="00000000";
 signal addR:std_logic_vector(7 downto 0):="00000000";
 signal dato:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
 signal wri:std_logic:='0';
 signal dout:std_logic_vector(39 downto 0);
+signal conta11:std_logic_vector(3 downto 0):="0000";
+signal conta250:std_logic_vector(7 downto 0):="00000000";
+signal enable11:std_logic;
+signal enable250:std_logic;
 signal clk:std_logic;
 
 begin
@@ -75,7 +101,7 @@ process(clk_50m,reset)
     variable cuenta:natural range 0 to 50000000:=0;
     begin
       if reset='0' then
-			cuenta:=0;
+		   cuenta:=0;
  	   elsif clk_50m'event and clk_50m='1' then
          cuenta:=cuenta + 1;
          if cuenta<25000000 then
@@ -100,10 +126,30 @@ port map(
        dout=>dout
         );
 
+CONT11:contMod11
+port map(
+        clk=>clk,
+     enable=>enable11,
+      reset=>reset,
+       cont=>conta11
+        );
+
+CONT250:contMod250
+port map(
+        clk=>clk,
+     enable=>enable250,
+      reset=>reset,
+       cont=>conta250
+        );
+
 CTRL:control
 port map(
          clk=>clk,
        reset=>reset,
+      cont11=>conta11,
+     cont250=>conta250,
+    enable11=>enable11,
+   enable250=>enable250,
           wr=>wri,
         addD=>addD,
         addR=>addR

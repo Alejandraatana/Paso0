@@ -8,6 +8,8 @@ set_global_assignment -name VHDL_FILE datos.vhdl
 set_global_assignment -name VHDL_FILE control.vhdl
 set_global_assignment -name VHDL_FILE resultado.vhdl
 set_global_assignment -name VHDL_FILE bib_mult.vhdl
+set_global_assignment -name VHDL_FILE contMod11.vhdl
+set_global_assignment -name VHDL_FILE contMod250.vhdl
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_file
 
 set_location_assignment  PIN_N2 -to clk_50m
