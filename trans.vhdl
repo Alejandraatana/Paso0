@@ -45,12 +45,10 @@ port(
         clk:  in std_logic;
       reset:  in std_logic;
      cont11:  in std_logic_vector(3 downto 0);
-    cont250:  in std_logic_vector(7 downto 0);
    enable11: out std_logic;
-  enable250: out std_logic;
-         wr: out std_logic;
-       addD: out std_logic_vector(7 downto 0);
-       addR: out std_logic_vector(7 downto 0)
+  enable250d: out std_logic;
+  enable250r: out std_logic;
+         wr: out std_logic
     );
 end component control;
 
@@ -72,15 +70,15 @@ component contMod250 is
         );
 end component contMod250;
 
-signal addD:std_logic_vector(7 downto 0):="00000000";
-signal addR:std_logic_vector(7 downto 0):="00000000";
 signal dato:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
 signal wri:std_logic:='0';
 signal dout:std_logic_vector(39 downto 0);
 signal conta11:std_logic_vector(3 downto 0):="0000";
-signal conta250:std_logic_vector(7 downto 0):="00000000";
+signal conta250d:std_logic_vector(7 downto 0):="00000000";
+signal conta250r:std_logic_vector(7 downto 0):="00000000";
 signal enable11:std_logic;
-signal enable250:std_logic;
+signal enable250d:std_logic;
+signal enable250r:std_logic;
 signal clk:std_logic;
 
 begin
@@ -95,7 +93,7 @@ datout6<=bin2seg(dout(27 downto 24));
 datout7<=bin2seg(dout(31 downto 28));
 clkl<=clk;
 resetl<=reset;
-add<=addD;
+add<=conta250r;
 
 process(clk_50m,reset)
     variable cuenta:natural range 0 to 50000000:=0;
@@ -114,14 +112,14 @@ end process;
 
 DAT:datos
 port map(
-         add=>addD,
+         add=>conta250d,
         dat=>dato(15 downto 0)
         );
 
 RES:resultado
 port map(
         din=>dato,
-        add=>addR,
+        add=>conta250r,
          wr=>wri,
        dout=>dout
         );
@@ -134,12 +132,20 @@ port map(
        cont=>conta11
         );
 
-CONT250:contMod250
+CONT250D:contMod250
 port map(
         clk=>clk,
-     enable=>enable250,
+     enable=>enable250d,
       reset=>reset,
-       cont=>conta250
+       cont=>conta250d
+        );
+
+CONT250R:contMod250
+port map(
+        clk=>clk,
+     enable=>enable250r,
+      reset=>reset,
+       cont=>conta250r
         );
 
 CTRL:control
@@ -147,11 +153,9 @@ port map(
          clk=>clk,
        reset=>reset,
       cont11=>conta11,
-     cont250=>conta250,
     enable11=>enable11,
-   enable250=>enable250,
-          wr=>wri,
-        addD=>addD,
-        addR=>addR
+   enable250d=>enable250d,
+   enable250r=>enable250r,
+          wr=>wri
         );
 end architecture beh;

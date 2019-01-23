@@ -15,7 +15,7 @@ entity contMod250 is
 end entity contMod250;
 
 architecture beh of contMod250 is
-signal contador: natural range 0 to 249:=0;
+signal contador: natural range 0 to 250:=0;
 
 begin
 cont<=std_logic_vector(to_unsigned(contador,8));
@@ -25,10 +25,10 @@ cont<=std_logic_vector(to_unsigned(contador,8));
        if reset='0' then
           contador<=0;
        elsif clk'event and clk='1' and enable='1' then
-          if contador<249 then
+          if contador<=249 then
              contador<=contador + 1;
-          else
-             contador<=0;
+          elsif contador>249 then
+             contador<=250;
           end if;
        end if;
    end process;
