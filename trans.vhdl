@@ -70,7 +70,15 @@ component contMod250 is
         );
 end component contMod250;
 
+component coeficientes is
+   port(
+           add: in std_logic_vector(3 downto 0);
+          coef:out std_logic_vector(15 downto 0) 
+       );
+end component coeficientes;
+
 signal dato:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
+signal coeficiente:std_logic_vector(15 downto 0):="0000000000000000";
 signal wri:std_logic:='0';
 signal dout:std_logic_vector(39 downto 0);
 signal conta11:std_logic_vector(3 downto 0):="0000";
@@ -87,10 +95,10 @@ datout0<=bin2seg(dout(3 downto 0));
 datout1<=bin2seg(dout(7 downto 4));
 datout2<=bin2seg(dout(11 downto 8));
 datout3<=bin2seg(dout(15 downto 12));
-datout4<=bin2seg(dout(19 downto 16));
-datout5<=bin2seg(dout(23 downto 20));
-datout6<=bin2seg(dout(27 downto 24));
-datout7<=bin2seg(dout(31 downto 28));
+datout4<=bin2seg(coeficiente(3 downto 0));
+datout5<=bin2seg(coeficiente(7 downto 4));
+datout6<=bin2seg(coeficiente(11 downto 8));
+datout7<=bin2seg(coeficiente(15 downto 12));
 clkl<=clk;
 resetl<=reset;
 add<=conta250r;
@@ -158,4 +166,11 @@ port map(
    enable250r=>enable250r,
           wr=>wri
         );
+
+COE:coeficientes 
+   port map(
+           add=>conta11,
+          coef=>coeficiente
+          );
+
 end architecture beh;
