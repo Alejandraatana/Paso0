@@ -48,6 +48,7 @@ port(
    enable11: out std_logic;
   enable250d: out std_logic;
   enable250r: out std_logic;
+  enablebuff: out std_logic;
          wr: out std_logic
     );
 end component control;
@@ -77,8 +78,20 @@ component coeficientes is
        );
 end component coeficientes;
 
+component buffDat is
+   port(
+             clk: in std_logic;
+           reset: in std_logic;
+          enable: in std_logic;
+             add: in std_logic_vector(3 downto 0);
+           datIn: in std_logic_vector(15 downto 0);
+          datOut:out std_logic_vector(15 downto 0)
+       );
+end component buffDat;
+
 signal dato:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
 signal coeficiente:std_logic_vector(15 downto 0):="0000000000000000";
+signal senal:std_logic_vector(15 downto 0):="0000000000000000";
 signal wri:std_logic:='0';
 signal dout:std_logic_vector(39 downto 0);
 signal conta11:std_logic_vector(3 downto 0):="0000";
@@ -86,7 +99,8 @@ signal conta250d:std_logic_vector(7 downto 0):="00000000";
 signal conta250r:std_logic_vector(7 downto 0):="00000000";
 signal enable11:std_logic;
 signal enable250d:std_logic;
-signal enable250r:std_logic;
+signal enable250r:std_logic; 
+signal enablebuff:std_logic;
 signal clk:std_logic;
 
 begin
@@ -164,6 +178,7 @@ port map(
     enable11=>enable11,
    enable250d=>enable250d,
    enable250r=>enable250r,
+   enablebuff=>enablebuff,
           wr=>wri
         );
 
@@ -172,5 +187,15 @@ COE:coeficientes
            add=>conta11,
           coef=>coeficiente
           );
+
+BUFF:buffDat 
+   port map(
+             clk=>clk,
+           reset=>reset,
+          enable=>enablebuff,
+             add=>conta11,
+           datIn=>dato(15 downto 0),
+          datOut=>senal
+       );
 
 end architecture beh;

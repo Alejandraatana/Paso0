@@ -13,13 +13,14 @@ port(
    enable11: out std_logic;
  enable250d: out std_logic;
  enable250r: out std_logic;
+ enablebuff: out std_logic;
          wr: out std_logic
     );
 end entity control;
 
 architecture beh of control is
 signal cont:integer range 0 to 10:=0;
-signal ini:std_logic:='0';
+signal ini:std_logic:='1';
 
 begin
 
@@ -29,17 +30,34 @@ process(clk,reset)
     begin
     if reset='0' then
       wr<='0';
+      enable11<='0';
+      enable250d<='0';
+      enable250r<='0';
+      enablebuff<='0';
+      ini<='0';
     elsif clk'event and clk='1' then
       if cont<10 then
-         wr<='0';
-         enable11<='1';
-         enable250d<='1';
-         enable250r<='0';
+         if ini='1' then 
+             wr<='0';
+             enable11<='0';
+             enable250d<='1';
+             enable250r<='0';
+             enablebuff<='1';
+             ini<='0';
+         else
+             wr<='0';
+             enable11<='1';
+             enable250d<='0';
+             enable250r<='0';
+             enablebuff<='0';
+         end if;
       else
+         wr<='1';
          enable11<='0';
          enable250d<='0';
-         wr<='1';
          enable250r<='1';
+         enablebuff<='0';
+         ini<='1';
       end if;
     end if;
 end process;

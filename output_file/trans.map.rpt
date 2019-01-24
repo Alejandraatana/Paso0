@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trans
-Wed Jan 23 16:38:27 2019
+Thu Jan 24 11:30:53 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -16,9 +16,10 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Port Connectivity Checks: "resultado:RES"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "buffDat:BUFF"
+ 12. Port Connectivity Checks: "resultado:RES"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +45,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 23 16:38:27 2019              ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 24 11:30:53 2019              ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; trans                                              ;
 ; Top-level Entity Name              ; trans                                              ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 7,174                                              ;
-;     Total combinational functions  ; 7,174                                              ;
-;     Dedicated logic registers      ; 49                                                 ;
-; Total registers                    ; 49                                                 ;
+; Total logic elements               ; 7,175                                              ;
+;     Total combinational functions  ; 7,175                                              ;
+;     Dedicated logic registers      ; 50                                                 ;
+; Total registers                    ; 50                                                 ;
 ; Total pins                         ; 68                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
@@ -170,6 +171,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; contMod11.vhdl                   ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/contMod11.vhdl    ;         ;
 ; contMod250.vhdl                  ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/contMod250.vhdl   ;         ;
 ; coeficientes.vhdl                ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/coeficientes.vhdl ;         ;
+; buffDat.vhdl                     ; yes             ; User VHDL File  ; /home/aleatana/Documents/pt/trans/Paso0/buffDat.vhdl      ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
@@ -178,27 +180,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 7,174                 ;
+; Estimated Total logic elements              ; 7,175                 ;
 ;                                             ;                       ;
-; Total combinational functions               ; 7174                  ;
+; Total combinational functions               ; 7175                  ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 2991                  ;
+;     -- 4 input functions                    ; 2993                  ;
 ;     -- 3 input functions                    ; 4127                  ;
-;     -- <=2 input functions                  ; 56                    ;
+;     -- <=2 input functions                  ; 55                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 7128                  ;
+;     -- normal mode                          ; 7129                  ;
 ;     -- arithmetic mode                      ; 46                    ;
 ;                                             ;                       ;
-; Total registers                             ; 49                    ;
-;     -- Dedicated logic registers            ; 49                    ;
+; Total registers                             ; 50                    ;
+;     -- Dedicated logic registers            ; 50                    ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
 ; I/O pins                                    ; 68                    ;
 ; Embedded Multiplier 9-bit elements          ; 0                     ;
 ; Maximum fan-out node                        ; resultado:RES|Add0~22 ;
 ; Maximum fan-out                             ; 491                   ;
-; Total fan-out                               ; 24699                 ;
+; Total fan-out                               ; 24709                 ;
 ; Average fan-out                             ; 3.39                  ;
 +---------------------------------------------+-----------------------+
 
@@ -208,12 +210,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |trans                     ; 7174 (333)        ; 49 (27)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |trans                     ; work         ;
+; |trans                     ; 7175 (333)        ; 50 (27)      ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |trans                     ; work         ;
 ;    |coeficientes:COE|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|coeficientes:COE    ; work         ;
 ;    |contMod11:CONT11|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod11:CONT11    ; work         ;
 ;    |contMod250:CONT250D|   ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250D ; work         ;
 ;    |contMod250:CONT250R|   ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250R ; work         ;
-;    |control:CTRL|          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|control:CTRL        ; work         ;
+;    |control:CTRL|          ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|control:CTRL        ; work         ;
 ;    |datos:DAT|             ; 365 (365)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT           ; work         ;
 ;    |resultado:RES|         ; 6448 (6448)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES       ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
@@ -330,15 +332,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                        ;
-+---------------------------------------+-----------------------------------+
-; Register name                         ; Reason for Removal                ;
-+---------------------------------------+-----------------------------------+
-; control:CTRL|enable250d               ; Merged with control:CTRL|enable11 ;
-; control:CTRL|enable250r               ; Merged with control:CTRL|enable11 ;
-; Total Number of Removed Registers = 2 ;                                   ;
-+---------------------------------------+-----------------------------------+
++---------------------------------------------------------------------+
+; Registers Removed During Synthesis                                  ;
++---------------------------------------+-----------------------------+
+; Register name                         ; Reason for Removal          ;
++---------------------------------------+-----------------------------+
+; control:CTRL|enable250r               ; Merged with control:CTRL|wr ;
+; control:CTRL|ini                      ; Merged with control:CTRL|wr ;
+; Total Number of Removed Registers = 2 ;                             ;
++---------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------+
@@ -346,14 +348,23 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
+; Total registers                              ; 50    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 47    ;
+; Number of registers using Asynchronous Clear ; 49    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "buffDat:BUFF"                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; datout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -394,7 +405,7 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Wed Jan 23 16:37:37 2019
+    Info: Processing started: Thu Jan 24 11:30:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trans -c trans
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file trans.vhdl
@@ -421,7 +432,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file contMod
 Info (12021): Found 2 design units, including 1 entities, in source file coeficientes.vhdl
     Info (12022): Found design unit 1: coeficientes-beh
     Info (12023): Found entity 1: coeficientes
+Info (12021): Found 2 design units, including 1 entities, in source file buffDat.vhdl
+    Info (12022): Found design unit 1: buffDat-beh
+    Info (12023): Found entity 1: buffDat
 Info (12127): Elaborating entity "trans" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at trans.vhdl(94): object "senal" assigned a value but never read
 Info (12128): Elaborating entity "datos" for hierarchy "datos:DAT"
 Info (12128): Elaborating entity "resultado" for hierarchy "resultado:RES"
 Warning (10631): VHDL Process Statement warning at resultado.vhdl(21): inferring latch(es) for signal or variable "cont", which holds its previous value in one or more paths through the process
@@ -439,6 +454,7 @@ Info (12128): Elaborating entity "contMod11" for hierarchy "contMod11:CONT11"
 Info (12128): Elaborating entity "contMod250" for hierarchy "contMod250:CONT250D"
 Info (12128): Elaborating entity "control" for hierarchy "control:CTRL"
 Info (12128): Elaborating entity "coeficientes" for hierarchy "coeficientes:COE"
+Info (12128): Elaborating entity "buffDat" for hierarchy "buffDat:BUFF"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "coeficientes:COE|coefi" is uninferred due to inappropriate RAM size
 Warning (113028): 5 out of 16 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
@@ -448,16 +464,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "datout6[0]" is stuck at GND
     Warning (13410): Pin "datout7[1]" is stuck at GND
     Warning (13410): Pin "datout7[2]" is stuck at GND
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register control:CTRL|wr will power up to Low
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 7263 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 66 output pins
     Info (21061): Implemented 7195 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 370 megabytes
-    Info: Processing ended: Wed Jan 23 16:38:27 2019
-    Info: Elapsed time: 00:00:50
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 382 megabytes
+    Info: Processing ended: Thu Jan 24 11:30:53 2019
+    Info: Elapsed time: 00:00:52
     Info: Total CPU time (on all processors): 00:00:50
 
 

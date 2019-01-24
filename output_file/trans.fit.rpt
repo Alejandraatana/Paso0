@@ -1,5 +1,5 @@
 Fitter report for trans
-Wed Jan 23 16:43:12 2019
+Thu Jan 24 11:35:40 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -64,17 +64,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                          ;
 +------------------------------------+----------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 23 16:43:12 2019              ;
+; Fitter Status                      ; Successful - Thu Jan 24 11:35:40 2019              ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; trans                                              ;
 ; Top-level Entity Name              ; trans                                              ;
 ; Family                             ; Cyclone II                                         ;
 ; Device                             ; EP2C35F672C6                                       ;
 ; Timing Models                      ; Final                                              ;
-; Total logic elements               ; 7,174 / 33,216 ( 22 % )                            ;
-;     Total combinational functions  ; 7,174 / 33,216 ( 22 % )                            ;
-;     Dedicated logic registers      ; 49 / 33,216 ( < 1 % )                              ;
-; Total registers                    ; 49                                                 ;
+; Total logic elements               ; 7,176 / 33,216 ( 22 % )                            ;
+;     Total combinational functions  ; 7,175 / 33,216 ( 22 % )                            ;
+;     Dedicated logic registers      ; 50 / 33,216 ( < 1 % )                              ;
+; Total registers                    ; 50                                                 ;
 ; Total pins                         ; 68 / 475 ( 14 % )                                  ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                                ;
@@ -148,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 7310 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 7310 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 7312 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 7312 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -172,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 7307    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 7309    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -188,26 +188,26 @@ The pin-out file can be found in /home/aleatana/Documents/pt/trans/Paso0/output_
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 7,174 / 33,216 ( 22 % ) ;
-;     -- Combinational with no register       ; 7125                    ;
-;     -- Register only                        ; 0                       ;
+; Total logic elements                        ; 7,176 / 33,216 ( 22 % ) ;
+;     -- Combinational with no register       ; 7126                    ;
+;     -- Register only                        ; 1                       ;
 ;     -- Combinational with a register        ; 49                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 2991                    ;
+;     -- 4 input functions                    ; 2993                    ;
 ;     -- 3 input functions                    ; 4127                    ;
-;     -- <=2 input functions                  ; 56                      ;
-;     -- Register only                        ; 0                       ;
+;     -- <=2 input functions                  ; 55                      ;
+;     -- Register only                        ; 1                       ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 7128                    ;
+;     -- normal mode                          ; 7129                    ;
 ;     -- arithmetic mode                      ; 46                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 49 / 34,593 ( < 1 % )   ;
-;     -- Dedicated logic registers            ; 49 / 33,216 ( < 1 % )   ;
+; Total registers*                            ; 50 / 34,593 ( < 1 % )   ;
+;     -- Dedicated logic registers            ; 50 / 33,216 ( < 1 % )   ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 491 / 2,076 ( 24 % )    ;
+; Total LABs:  partially or completely used   ; 490 / 2,076 ( 24 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 68 / 475 ( 14 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )          ;
@@ -223,10 +223,10 @@ The pin-out file can be found in /home/aleatana/Documents/pt/trans/Paso0/output_
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 15% / 15% / 16%         ;
-; Peak interconnect usage (total/H/V)         ; 70% / 67% / 74%         ;
+; Peak interconnect usage (total/H/V)         ; 68% / 66% / 72%         ;
 ; Maximum fan-out                             ; 491                     ;
 ; Highest non-global fan-out                  ; 491                     ;
-; Total fan-out                               ; 24715                   ;
+; Total fan-out                               ; 24726                   ;
 ; Average fan-out                             ; 3.38                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -240,25 +240,25 @@ The pin-out file can be found in /home/aleatana/Documents/pt/trans/Paso0/output_
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 7174 / 33216 ( 22 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 7125                  ; 0                              ;
-;     -- Register only                        ; 0                     ; 0                              ;
+; Total logic elements                        ; 7176 / 33216 ( 22 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 7126                  ; 0                              ;
+;     -- Register only                        ; 1                     ; 0                              ;
 ;     -- Combinational with a register        ; 49                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 2991                  ; 0                              ;
+;     -- 4 input functions                    ; 2993                  ; 0                              ;
 ;     -- 3 input functions                    ; 4127                  ; 0                              ;
-;     -- <=2 input functions                  ; 56                    ; 0                              ;
-;     -- Register only                        ; 0                     ; 0                              ;
+;     -- <=2 input functions                  ; 55                    ; 0                              ;
+;     -- Register only                        ; 1                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 7128                  ; 0                              ;
+;     -- normal mode                          ; 7129                  ; 0                              ;
 ;     -- arithmetic mode                      ; 46                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 49                    ; 0                              ;
-;     -- Dedicated logic registers            ; 49 / 33216 ( < 1 % )  ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 50                    ; 0                              ;
+;     -- Dedicated logic registers            ; 50 / 33216 ( < 1 % )  ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 491 / 2076 ( 24 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 490 / 2076 ( 24 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 68                    ; 0                              ;
@@ -274,8 +274,8 @@ The pin-out file can be found in /home/aleatana/Documents/pt/trans/Paso0/output_
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 24715                 ; 0                              ;
-;     -- Registered Connections               ; 1689                  ; 0                              ;
+;     -- Total Connections                    ; 24726                 ; 0                              ;
+;     -- Registered Connections               ; 1684                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -308,7 +308,7 @@ The pin-out file can be found in /home/aleatana/Documents/pt/trans/Paso0/output_
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clk_50m ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; reset   ; G26   ; 5        ; 65           ; 27           ; 1           ; 50                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; reset   ; G26   ; 5        ; 65           ; 27           ; 1           ; 51                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -1125,12 +1125,12 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
-; |trans                     ; 7174 (332)  ; 49 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 68   ; 0            ; 7125 (305)   ; 0 (0)             ; 49 (28)          ; |trans                     ; work         ;
+; |trans                     ; 7176 (333)  ; 50 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 68   ; 0            ; 7126 (306)   ; 1 (0)             ; 49 (27)          ; |trans                     ; work         ;
 ;    |coeficientes:COE|      ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |trans|coeficientes:COE    ; work         ;
 ;    |contMod11:CONT11|      ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |trans|contMod11:CONT11    ; work         ;
 ;    |contMod250:CONT250D|   ; 10 (10)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 8 (8)            ; |trans|contMod250:CONT250D ; work         ;
 ;    |contMod250:CONT250R|   ; 10 (10)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 8 (8)            ; |trans|contMod250:CONT250R ; work         ;
-;    |control:CTRL|          ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |trans|control:CTRL        ; work         ;
+;    |control:CTRL|          ; 4 (4)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 2 (2)            ; |trans|control:CTRL        ; work         ;
 ;    |datos:DAT|             ; 365 (365)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 365 (365)    ; 0 (0)             ; 0 (0)            ; |trans|datos:DAT           ; work         ;
 ;    |resultado:RES|         ; 6448 (6448) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6448 (6448)  ; 0 (0)             ; 0 (0)            ; |trans|resultado:RES       ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
@@ -1266,8 +1266,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - cuenta[23]                      ; 1                 ; 6       ;
 ;      - cuenta[24]                      ; 1                 ; 6       ;
 ;      - cuenta[25]                      ; 1                 ; 6       ;
-;      - control:CTRL|enable11           ; 1                 ; 6       ;
 ;      - control:CTRL|wr                 ; 1                 ; 6       ;
+;      - control:CTRL|enable11           ; 1                 ; 6       ;
+;      - control:CTRL|enable250d         ; 1                 ; 6       ;
 ;      - resetl                          ; 1                 ; 6       ;
 ; clk_50m                                ;                   ;         ;
 +----------------------------------------+-------------------+---------+
@@ -1278,269 +1279,271 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                            ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; clk                             ; LCFF_X35_Y9_N1     ; 23      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk                             ; LCFF_X31_Y11_N1    ; 10      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk                             ; LCFF_X31_Y11_N1    ; 15      ; Clock                      ; yes    ; Global Clock         ; GCLK14           ; --                        ;
 ; clk_50m                         ; PIN_N2             ; 27      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; contMod250:CONT250D|LessThan1~1 ; LCCOMB_X29_Y16_N30 ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; contMod250:CONT250R|LessThan1~1 ; LCCOMB_X35_Y17_N6  ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; control:CTRL|enable11           ; LCFF_X35_Y10_N17   ; 20      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; control:CTRL|wr                 ; LCFF_X31_Y17_N21   ; 264     ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; reset                           ; PIN_G26            ; 50      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; rtl~0                           ; LCCOMB_X31_Y17_N20 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; rtl~1                           ; LCCOMB_X31_Y19_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; rtl~10                          ; LCCOMB_X31_Y17_N6  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; rtl~100                         ; LCCOMB_X35_Y19_N16 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; rtl~101                         ; LCCOMB_X30_Y17_N24 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; rtl~102                         ; LCCOMB_X31_Y17_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK15           ; --                        ;
-; rtl~103                         ; LCCOMB_X35_Y19_N30 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; rtl~104                         ; LCCOMB_X35_Y19_N18 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; rtl~105                         ; LCCOMB_X35_Y19_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; rtl~106                         ; LCCOMB_X35_Y19_N20 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; rtl~107                         ; LCCOMB_X35_Y19_N4  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; rtl~108                         ; LCCOMB_X35_Y19_N6  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; rtl~109                         ; LCCOMB_X35_Y19_N8  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; rtl~11                          ; LCCOMB_X33_Y18_N12 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; rtl~110                         ; LCCOMB_X35_Y19_N2  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; rtl~111                         ; LCCOMB_X34_Y8_N28  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~112                         ; LCCOMB_X35_Y13_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~113                         ; LCCOMB_X34_Y17_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~114                         ; LCCOMB_X34_Y13_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~115                         ; LCCOMB_X41_Y13_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~116                         ; LCCOMB_X43_Y14_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~117                         ; LCCOMB_X44_Y15_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~118                         ; LCCOMB_X46_Y14_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~119                         ; LCCOMB_X43_Y14_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~12                          ; LCCOMB_X30_Y20_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~120                         ; LCCOMB_X40_Y13_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~121                         ; LCCOMB_X43_Y17_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~122                         ; LCCOMB_X40_Y13_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~123                         ; LCCOMB_X41_Y17_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~124                         ; LCCOMB_X42_Y14_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~125                         ; LCCOMB_X21_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~126                         ; LCCOMB_X27_Y12_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~127                         ; LCCOMB_X37_Y10_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~128                         ; LCCOMB_X24_Y17_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~129                         ; LCCOMB_X45_Y17_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~13                          ; LCCOMB_X35_Y18_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~130                         ; LCCOMB_X27_Y20_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~131                         ; LCCOMB_X42_Y15_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~132                         ; LCCOMB_X48_Y18_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~133                         ; LCCOMB_X23_Y17_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~134                         ; LCCOMB_X48_Y20_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~135                         ; LCCOMB_X44_Y16_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~136                         ; LCCOMB_X22_Y17_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~137                         ; LCCOMB_X46_Y17_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~138                         ; LCCOMB_X48_Y20_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~139                         ; LCCOMB_X25_Y17_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~14                          ; LCCOMB_X28_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~140                         ; LCCOMB_X45_Y17_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~141                         ; LCCOMB_X22_Y16_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~142                         ; LCCOMB_X44_Y17_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~143                         ; LCCOMB_X41_Y15_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~144                         ; LCCOMB_X47_Y13_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~145                         ; LCCOMB_X33_Y12_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~146                         ; LCCOMB_X48_Y13_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~147                         ; LCCOMB_X35_Y12_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~148                         ; LCCOMB_X31_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~149                         ; LCCOMB_X33_Y22_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~15                          ; LCCOMB_X37_Y16_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~150                         ; LCCOMB_X32_Y24_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~151                         ; LCCOMB_X32_Y20_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~152                         ; LCCOMB_X27_Y19_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~153                         ; LCCOMB_X46_Y18_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~154                         ; LCCOMB_X33_Y23_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~155                         ; LCCOMB_X28_Y21_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~156                         ; LCCOMB_X44_Y15_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~157                         ; LCCOMB_X43_Y16_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~158                         ; LCCOMB_X46_Y14_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~159                         ; LCCOMB_X31_Y17_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~16                          ; LCCOMB_X25_Y16_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~160                         ; LCCOMB_X48_Y17_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~161                         ; LCCOMB_X48_Y16_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~162                         ; LCCOMB_X47_Y17_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~163                         ; LCCOMB_X41_Y18_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~164                         ; LCCOMB_X31_Y14_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~165                         ; LCCOMB_X48_Y21_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~166                         ; LCCOMB_X48_Y21_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~167                         ; LCCOMB_X32_Y17_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~168                         ; LCCOMB_X23_Y16_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~169                         ; LCCOMB_X48_Y19_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~17                          ; LCCOMB_X45_Y19_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~170                         ; LCCOMB_X48_Y19_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~171                         ; LCCOMB_X32_Y10_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~172                         ; LCCOMB_X43_Y17_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~173                         ; LCCOMB_X47_Y18_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~174                         ; LCCOMB_X47_Y18_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~175                         ; LCCOMB_X42_Y17_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~176                         ; LCCOMB_X23_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~177                         ; LCCOMB_X43_Y19_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~178                         ; LCCOMB_X29_Y21_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~179                         ; LCCOMB_X40_Y10_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~18                          ; LCCOMB_X30_Y22_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~180                         ; LCCOMB_X45_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~181                         ; LCCOMB_X22_Y10_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~182                         ; LCCOMB_X38_Y15_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~183                         ; LCCOMB_X33_Y10_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~184                         ; LCCOMB_X22_Y15_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~185                         ; LCCOMB_X43_Y19_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~186                         ; LCCOMB_X38_Y15_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~187                         ; LCCOMB_X34_Y8_N14  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~188                         ; LCCOMB_X36_Y16_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~189                         ; LCCOMB_X22_Y13_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~19                          ; LCCOMB_X42_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~190                         ; LCCOMB_X27_Y13_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~191                         ; LCCOMB_X37_Y10_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~192                         ; LCCOMB_X35_Y22_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~193                         ; LCCOMB_X32_Y22_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~194                         ; LCCOMB_X31_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~195                         ; LCCOMB_X35_Y22_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~196                         ; LCCOMB_X24_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~197                         ; LCCOMB_X32_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~198                         ; LCCOMB_X30_Y14_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~199                         ; LCCOMB_X24_Y13_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~2                           ; LCCOMB_X29_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~20                          ; LCCOMB_X25_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~200                         ; LCCOMB_X29_Y20_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~201                         ; LCCOMB_X30_Y25_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~202                         ; LCCOMB_X31_Y23_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~203                         ; LCCOMB_X27_Y25_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~204                         ; LCCOMB_X34_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~205                         ; LCCOMB_X31_Y20_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~206                         ; LCCOMB_X33_Y14_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~207                         ; LCCOMB_X31_Y9_N12  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~208                         ; LCCOMB_X25_Y23_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~209                         ; LCCOMB_X34_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~21                          ; LCCOMB_X27_Y19_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~210                         ; LCCOMB_X34_Y19_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~211                         ; LCCOMB_X27_Y15_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~212                         ; LCCOMB_X31_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~213                         ; LCCOMB_X33_Y21_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~214                         ; LCCOMB_X32_Y25_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~215                         ; LCCOMB_X32_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~216                         ; LCCOMB_X29_Y22_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~217                         ; LCCOMB_X32_Y26_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~218                         ; LCCOMB_X30_Y25_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~219                         ; LCCOMB_X28_Y23_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~22                          ; LCCOMB_X28_Y22_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~220                         ; LCCOMB_X35_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~221                         ; LCCOMB_X35_Y22_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~222                         ; LCCOMB_X37_Y17_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~223                         ; LCCOMB_X36_Y13_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~224                         ; LCCOMB_X27_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~225                         ; LCCOMB_X32_Y23_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~226                         ; LCCOMB_X27_Y17_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~227                         ; LCCOMB_X31_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~228                         ; LCCOMB_X27_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~229                         ; LCCOMB_X24_Y16_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~23                          ; LCCOMB_X35_Y16_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~230                         ; LCCOMB_X31_Y15_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~231                         ; LCCOMB_X23_Y15_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~232                         ; LCCOMB_X30_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~233                         ; LCCOMB_X29_Y25_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~234                         ; LCCOMB_X31_Y23_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~235                         ; LCCOMB_X27_Y25_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~236                         ; LCCOMB_X31_Y10_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~237                         ; LCCOMB_X27_Y21_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~238                         ; LCCOMB_X27_Y11_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~239                         ; LCCOMB_X34_Y10_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~24                          ; LCCOMB_X24_Y18_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~240                         ; LCCOMB_X25_Y20_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~241                         ; LCCOMB_X37_Y15_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~242                         ; LCCOMB_X37_Y15_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~243                         ; LCCOMB_X30_Y11_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~244                         ; LCCOMB_X33_Y13_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~245                         ; LCCOMB_X37_Y20_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~246                         ; LCCOMB_X37_Y20_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~247                         ; LCCOMB_X38_Y18_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~248                         ; LCCOMB_X30_Y10_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~249                         ; LCCOMB_X30_Y24_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~25                          ; LCCOMB_X45_Y19_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~250                         ; LCCOMB_X31_Y24_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~251                         ; LCCOMB_X23_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~252                         ; LCCOMB_X38_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~253                         ; LCCOMB_X35_Y14_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~254                         ; LCCOMB_X38_Y16_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~255                         ; LCCOMB_X37_Y14_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~26                          ; LCCOMB_X30_Y22_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~27                          ; LCCOMB_X29_Y10_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~28                          ; LCCOMB_X32_Y19_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~29                          ; LCCOMB_X23_Y19_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~3                           ; LCCOMB_X35_Y14_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~30                          ; LCCOMB_X23_Y18_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~31                          ; LCCOMB_X42_Y16_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~32                          ; LCCOMB_X33_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~33                          ; LCCOMB_X34_Y14_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~34                          ; LCCOMB_X28_Y20_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~35                          ; LCCOMB_X36_Y17_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~36                          ; LCCOMB_X25_Y19_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~37                          ; LCCOMB_X37_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~38                          ; LCCOMB_X30_Y23_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~39                          ; LCCOMB_X33_Y17_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~4                           ; LCCOMB_X27_Y10_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~40                          ; LCCOMB_X25_Y19_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~41                          ; LCCOMB_X37_Y21_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~42                          ; LCCOMB_X30_Y23_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~43                          ; LCCOMB_X31_Y11_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~44                          ; LCCOMB_X36_Y15_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~45                          ; LCCOMB_X37_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~46                          ; LCCOMB_X32_Y20_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~47                          ; LCCOMB_X36_Y17_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~48                          ; LCCOMB_X25_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~49                          ; LCCOMB_X33_Y19_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~5                           ; LCCOMB_X28_Y19_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~50                          ; LCCOMB_X25_Y22_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~51                          ; LCCOMB_X36_Y13_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~52                          ; LCCOMB_X42_Y19_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~53                          ; LCCOMB_X23_Y14_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~54                          ; LCCOMB_X24_Y22_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~55                          ; LCCOMB_X28_Y11_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~56                          ; LCCOMB_X42_Y19_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~57                          ; LCCOMB_X22_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~58                          ; LCCOMB_X24_Y22_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~59                          ; LCCOMB_X30_Y8_N6   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~6                           ; LCCOMB_X29_Y23_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~60                          ; LCCOMB_X23_Y20_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~61                          ; LCCOMB_X25_Y13_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~62                          ; LCCOMB_X23_Y20_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~63                          ; LCCOMB_X37_Y14_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~64                          ; LCCOMB_X28_Y10_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~65                          ; LCCOMB_X25_Y11_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~66                          ; LCCOMB_X25_Y11_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~67                          ; LCCOMB_X29_Y9_N8   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~68                          ; LCCOMB_X29_Y8_N16  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~69                          ; LCCOMB_X30_Y9_N14  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~7                           ; LCCOMB_X33_Y18_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~70                          ; LCCOMB_X33_Y11_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~71                          ; LCCOMB_X35_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~72                          ; LCCOMB_X32_Y11_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~73                          ; LCCOMB_X32_Y13_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~74                          ; LCCOMB_X32_Y11_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~75                          ; LCCOMB_X35_Y15_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~76                          ; LCCOMB_X35_Y11_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~77                          ; LCCOMB_X22_Y10_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~78                          ; LCCOMB_X28_Y9_N22  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~79                          ; LCCOMB_X32_Y9_N20  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~8                           ; LCCOMB_X30_Y24_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~80                          ; LCCOMB_X25_Y14_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~81                          ; LCCOMB_X32_Y21_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~82                          ; LCCOMB_X30_Y19_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~83                          ; LCCOMB_X34_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~84                          ; LCCOMB_X42_Y20_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~85                          ; LCCOMB_X25_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~86                          ; LCCOMB_X37_Y13_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~87                          ; LCCOMB_X40_Y16_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~88                          ; LCCOMB_X32_Y14_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~89                          ; LCCOMB_X31_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~9                           ; LCCOMB_X34_Y16_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~90                          ; LCCOMB_X34_Y20_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~91                          ; LCCOMB_X32_Y18_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~92                          ; LCCOMB_X42_Y20_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~93                          ; LCCOMB_X22_Y14_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~94                          ; LCCOMB_X27_Y9_N4   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~95                          ; LCCOMB_X37_Y12_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~96                          ; LCCOMB_X27_Y23_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~97                          ; LCCOMB_X33_Y20_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~98                          ; LCCOMB_X29_Y11_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; rtl~99                          ; LCCOMB_X27_Y14_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; contMod250:CONT250D|LessThan1~1 ; LCCOMB_X34_Y17_N18 ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; contMod250:CONT250R|LessThan1~1 ; LCCOMB_X37_Y19_N26 ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; control:CTRL|enable11           ; LCFF_X11_Y19_N9    ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; control:CTRL|enable250d         ; LCFF_X34_Y20_N17   ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; control:CTRL|wr                 ; LCFF_X37_Y19_N29   ; 274     ; Clock enable, Latch enable ; no     ; --                   ; --               ; --                        ;
+; reset                           ; PIN_G26            ; 51      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; rtl~0                           ; LCCOMB_X36_Y20_N2  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; rtl~1                           ; LCCOMB_X37_Y23_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; rtl~10                          ; LCCOMB_X37_Y15_N4  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; rtl~100                         ; LCCOMB_X24_Y18_N4  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; rtl~101                         ; LCCOMB_X20_Y18_N6  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; rtl~102                         ; LCCOMB_X37_Y15_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; rtl~103                         ; LCCOMB_X37_Y15_N26 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; rtl~104                         ; LCCOMB_X37_Y15_N16 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; rtl~105                         ; LCCOMB_X37_Y15_N6  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; rtl~106                         ; LCCOMB_X37_Y15_N28 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; rtl~107                         ; LCCOMB_X37_Y15_N24 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; rtl~108                         ; LCCOMB_X27_Y18_N24 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; rtl~109                         ; LCCOMB_X20_Y18_N20 ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; rtl~11                          ; LCCOMB_X36_Y19_N0  ; 15      ; Latch enable               ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; rtl~110                         ; LCCOMB_X33_Y8_N24  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~111                         ; LCCOMB_X40_Y27_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~112                         ; LCCOMB_X38_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~113                         ; LCCOMB_X37_Y22_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~114                         ; LCCOMB_X34_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~115                         ; LCCOMB_X37_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~116                         ; LCCOMB_X41_Y18_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~117                         ; LCCOMB_X42_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~118                         ; LCCOMB_X41_Y13_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~119                         ; LCCOMB_X44_Y19_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~12                          ; LCCOMB_X44_Y20_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~120                         ; LCCOMB_X27_Y15_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~121                         ; LCCOMB_X37_Y11_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~122                         ; LCCOMB_X29_Y14_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~123                         ; LCCOMB_X30_Y12_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~124                         ; LCCOMB_X44_Y15_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~125                         ; LCCOMB_X37_Y22_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~126                         ; LCCOMB_X32_Y12_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~127                         ; LCCOMB_X36_Y22_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~128                         ; LCCOMB_X36_Y24_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~129                         ; LCCOMB_X44_Y16_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~13                          ; LCCOMB_X31_Y21_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~130                         ; LCCOMB_X35_Y11_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~131                         ; LCCOMB_X30_Y22_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~132                         ; LCCOMB_X43_Y18_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~133                         ; LCCOMB_X34_Y23_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~134                         ; LCCOMB_X45_Y17_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~135                         ; LCCOMB_X42_Y16_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~136                         ; LCCOMB_X36_Y24_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~137                         ; LCCOMB_X40_Y12_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~138                         ; LCCOMB_X45_Y17_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~139                         ; LCCOMB_X43_Y23_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~14                          ; LCCOMB_X42_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~140                         ; LCCOMB_X38_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~141                         ; LCCOMB_X35_Y22_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~142                         ; LCCOMB_X42_Y17_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~143                         ; LCCOMB_X36_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~144                         ; LCCOMB_X43_Y19_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~145                         ; LCCOMB_X41_Y20_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~146                         ; LCCOMB_X42_Y19_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~147                         ; LCCOMB_X42_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~148                         ; LCCOMB_X32_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~149                         ; LCCOMB_X46_Y16_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~15                          ; LCCOMB_X46_Y19_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~150                         ; LCCOMB_X46_Y16_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~151                         ; LCCOMB_X44_Y20_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~152                         ; LCCOMB_X37_Y20_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~153                         ; LCCOMB_X41_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~154                         ; LCCOMB_X38_Y13_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~155                         ; LCCOMB_X42_Y20_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~156                         ; LCCOMB_X42_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~157                         ; LCCOMB_X41_Y21_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~158                         ; LCCOMB_X41_Y13_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~159                         ; LCCOMB_X42_Y19_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~16                          ; LCCOMB_X29_Y23_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~160                         ; LCCOMB_X43_Y17_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~161                         ; LCCOMB_X30_Y21_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~162                         ; LCCOMB_X37_Y12_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~163                         ; LCCOMB_X29_Y17_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~164                         ; LCCOMB_X38_Y17_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~165                         ; LCCOMB_X42_Y12_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~166                         ; LCCOMB_X42_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~167                         ; LCCOMB_X34_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~168                         ; LCCOMB_X31_Y15_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~169                         ; LCCOMB_X35_Y12_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~17                          ; LCCOMB_X43_Y15_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~170                         ; LCCOMB_X35_Y12_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~171                         ; LCCOMB_X32_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~172                         ; LCCOMB_X32_Y11_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~173                         ; LCCOMB_X29_Y13_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~174                         ; LCCOMB_X29_Y13_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~175                         ; LCCOMB_X31_Y12_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~176                         ; LCCOMB_X35_Y24_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~177                         ; LCCOMB_X36_Y11_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~178                         ; LCCOMB_X36_Y9_N12  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~179                         ; LCCOMB_X36_Y26_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~18                          ; LCCOMB_X23_Y18_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~180                         ; LCCOMB_X33_Y20_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~181                         ; LCCOMB_X37_Y26_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~182                         ; LCCOMB_X37_Y9_N16  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~183                         ; LCCOMB_X33_Y23_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~184                         ; LCCOMB_X37_Y25_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~185                         ; LCCOMB_X37_Y11_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~186                         ; LCCOMB_X37_Y9_N0   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~187                         ; LCCOMB_X37_Y27_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~188                         ; LCCOMB_X36_Y15_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~189                         ; LCCOMB_X34_Y27_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~19                          ; LCCOMB_X29_Y23_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~190                         ; LCCOMB_X33_Y11_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~191                         ; LCCOMB_X36_Y22_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~192                         ; LCCOMB_X48_Y17_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~193                         ; LCCOMB_X37_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~194                         ; LCCOMB_X38_Y14_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~195                         ; LCCOMB_X48_Y17_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~196                         ; LCCOMB_X31_Y20_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~197                         ; LCCOMB_X34_Y24_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~198                         ; LCCOMB_X31_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~199                         ; LCCOMB_X35_Y26_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~2                           ; LCCOMB_X36_Y21_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~20                          ; LCCOMB_X33_Y24_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~200                         ; LCCOMB_X33_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~201                         ; LCCOMB_X41_Y19_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~202                         ; LCCOMB_X25_Y18_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~203                         ; LCCOMB_X38_Y19_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~204                         ; LCCOMB_X33_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~205                         ; LCCOMB_X38_Y16_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~206                         ; LCCOMB_X34_Y9_N22  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~207                         ; LCCOMB_X38_Y26_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~208                         ; LCCOMB_X37_Y23_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~209                         ; LCCOMB_X37_Y23_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~21                          ; LCCOMB_X37_Y23_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~210                         ; LCCOMB_X30_Y23_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~211                         ; LCCOMB_X34_Y25_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~212                         ; LCCOMB_X29_Y18_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~213                         ; LCCOMB_X29_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~214                         ; LCCOMB_X30_Y19_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~215                         ; LCCOMB_X30_Y15_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~216                         ; LCCOMB_X29_Y20_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~217                         ; LCCOMB_X31_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~218                         ; LCCOMB_X30_Y18_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~219                         ; LCCOMB_X38_Y19_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~22                          ; LCCOMB_X29_Y16_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~220                         ; LCCOMB_X30_Y20_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~221                         ; LCCOMB_X29_Y20_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~222                         ; LCCOMB_X28_Y17_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~223                         ; LCCOMB_X31_Y24_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~224                         ; LCCOMB_X45_Y15_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~225                         ; LCCOMB_X36_Y14_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~226                         ; LCCOMB_X34_Y11_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~227                         ; LCCOMB_X45_Y15_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~228                         ; LCCOMB_X32_Y26_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~229                         ; LCCOMB_X32_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~23                          ; LCCOMB_X31_Y22_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~230                         ; LCCOMB_X27_Y20_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~231                         ; LCCOMB_X34_Y26_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~232                         ; LCCOMB_X31_Y14_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~233                         ; LCCOMB_X41_Y17_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~234                         ; LCCOMB_X25_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~235                         ; LCCOMB_X38_Y19_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~236                         ; LCCOMB_X27_Y19_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~237                         ; LCCOMB_X40_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~238                         ; LCCOMB_X34_Y13_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~239                         ; LCCOMB_X36_Y23_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~24                          ; LCCOMB_X32_Y25_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~240                         ; LCCOMB_X33_Y25_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~241                         ; LCCOMB_X29_Y21_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~242                         ; LCCOMB_X29_Y21_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~243                         ; LCCOMB_X36_Y25_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~244                         ; LCCOMB_X36_Y12_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~245                         ; LCCOMB_X40_Y15_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~246                         ; LCCOMB_X29_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~247                         ; LCCOMB_X44_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~248                         ; LCCOMB_X31_Y16_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~249                         ; LCCOMB_X28_Y18_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~25                          ; LCCOMB_X43_Y15_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~250                         ; LCCOMB_X28_Y18_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~251                         ; LCCOMB_X28_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~252                         ; LCCOMB_X29_Y22_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~253                         ; LCCOMB_X40_Y21_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~254                         ; LCCOMB_X28_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~255                         ; LCCOMB_X36_Y25_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~26                          ; LCCOMB_X23_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~27                          ; LCCOMB_X32_Y24_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~28                          ; LCCOMB_X38_Y18_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~29                          ; LCCOMB_X37_Y22_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~3                           ; LCCOMB_X48_Y19_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~30                          ; LCCOMB_X30_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~31                          ; LCCOMB_X29_Y22_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~32                          ; LCCOMB_X32_Y18_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~33                          ; LCCOMB_X28_Y17_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~34                          ; LCCOMB_X25_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~35                          ; LCCOMB_X28_Y17_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~36                          ; LCCOMB_X25_Y17_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~37                          ; LCCOMB_X46_Y15_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~38                          ; LCCOMB_X23_Y15_N2  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~39                          ; LCCOMB_X35_Y9_N4   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~4                           ; LCCOMB_X38_Y21_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~40                          ; LCCOMB_X24_Y17_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~41                          ; LCCOMB_X46_Y15_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~42                          ; LCCOMB_X23_Y15_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~43                          ; LCCOMB_X27_Y16_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~44                          ; LCCOMB_X33_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~45                          ; LCCOMB_X24_Y18_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~46                          ; LCCOMB_X27_Y18_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~47                          ; LCCOMB_X28_Y13_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~48                          ; LCCOMB_X32_Y23_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~49                          ; LCCOMB_X37_Y17_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~5                           ; LCCOMB_X47_Y18_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~50                          ; LCCOMB_X28_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~51                          ; LCCOMB_X31_Y23_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~52                          ; LCCOMB_X41_Y15_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~53                          ; LCCOMB_X37_Y24_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~54                          ; LCCOMB_X30_Y8_N6   ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~55                          ; LCCOMB_X38_Y23_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~56                          ; LCCOMB_X41_Y15_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~57                          ; LCCOMB_X38_Y25_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~58                          ; LCCOMB_X24_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~59                          ; LCCOMB_X35_Y27_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~6                           ; LCCOMB_X49_Y19_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~60                          ; LCCOMB_X37_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~61                          ; LCCOMB_X37_Y18_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~62                          ; LCCOMB_X32_Y22_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~63                          ; LCCOMB_X32_Y22_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~64                          ; LCCOMB_X37_Y14_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~65                          ; LCCOMB_X40_Y17_N0  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~66                          ; LCCOMB_X40_Y17_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~67                          ; LCCOMB_X40_Y18_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~68                          ; LCCOMB_X44_Y18_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~69                          ; LCCOMB_X32_Y14_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~7                           ; LCCOMB_X42_Y18_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~70                          ; LCCOMB_X36_Y16_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~71                          ; LCCOMB_X43_Y20_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~72                          ; LCCOMB_X40_Y13_N12 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~73                          ; LCCOMB_X35_Y10_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~74                          ; LCCOMB_X31_Y13_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~75                          ; LCCOMB_X37_Y13_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~76                          ; LCCOMB_X46_Y13_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~77                          ; LCCOMB_X37_Y26_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~78                          ; LCCOMB_X32_Y10_N20 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~79                          ; LCCOMB_X36_Y20_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~8                           ; LCCOMB_X33_Y21_N22 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~80                          ; LCCOMB_X32_Y19_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~81                          ; LCCOMB_X41_Y14_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~82                          ; LCCOMB_X37_Y10_N10 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~83                          ; LCCOMB_X40_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~84                          ; LCCOMB_X38_Y11_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~85                          ; LCCOMB_X35_Y23_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~86                          ; LCCOMB_X38_Y11_N30 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~87                          ; LCCOMB_X37_Y22_N24 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~88                          ; LCCOMB_X35_Y8_N10  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~89                          ; LCCOMB_X41_Y14_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~9                           ; LCCOMB_X32_Y16_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~90                          ; LCCOMB_X33_Y12_N26 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~91                          ; LCCOMB_X36_Y10_N18 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~92                          ; LCCOMB_X36_Y13_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~93                          ; LCCOMB_X35_Y25_N4  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~94                          ; LCCOMB_X33_Y8_N14  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~95                          ; LCCOMB_X36_Y26_N14 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~96                          ; LCCOMB_X32_Y21_N16 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~97                          ; LCCOMB_X38_Y12_N28 ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~98                          ; LCCOMB_X34_Y10_N8  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; rtl~99                          ; LCCOMB_X40_Y19_N6  ; 15      ; Latch enable               ; no     ; --                   ; --               ; --                        ;
 +---------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1549,22 +1552,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name    ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+--------------------+---------+----------------------+------------------+---------------------------+
+; clk     ; LCFF_X31_Y11_N1    ; 15      ; Global Clock         ; GCLK14           ; --                        ;
 ; clk_50m ; PIN_N2             ; 27      ; Global Clock         ; GCLK2            ; --                        ;
-; rtl~0   ; LCCOMB_X31_Y17_N20 ; 15      ; Global Clock         ; GCLK12           ; --                        ;
-; rtl~1   ; LCCOMB_X31_Y19_N0  ; 15      ; Global Clock         ; GCLK3            ; --                        ;
-; rtl~10  ; LCCOMB_X31_Y17_N6  ; 15      ; Global Clock         ; GCLK13           ; --                        ;
-; rtl~100 ; LCCOMB_X35_Y19_N16 ; 15      ; Global Clock         ; GCLK5            ; --                        ;
-; rtl~101 ; LCCOMB_X30_Y17_N24 ; 15      ; Global Clock         ; GCLK0            ; --                        ;
-; rtl~102 ; LCCOMB_X31_Y17_N0  ; 15      ; Global Clock         ; GCLK15           ; --                        ;
-; rtl~103 ; LCCOMB_X35_Y19_N30 ; 15      ; Global Clock         ; GCLK10           ; --                        ;
-; rtl~104 ; LCCOMB_X35_Y19_N18 ; 15      ; Global Clock         ; GCLK4            ; --                        ;
-; rtl~105 ; LCCOMB_X35_Y19_N0  ; 15      ; Global Clock         ; GCLK9            ; --                        ;
-; rtl~106 ; LCCOMB_X35_Y19_N20 ; 15      ; Global Clock         ; GCLK14           ; --                        ;
-; rtl~107 ; LCCOMB_X35_Y19_N4  ; 15      ; Global Clock         ; GCLK8            ; --                        ;
-; rtl~108 ; LCCOMB_X35_Y19_N6  ; 15      ; Global Clock         ; GCLK7            ; --                        ;
-; rtl~109 ; LCCOMB_X35_Y19_N8  ; 15      ; Global Clock         ; GCLK6            ; --                        ;
-; rtl~11  ; LCCOMB_X33_Y18_N12 ; 15      ; Global Clock         ; GCLK1            ; --                        ;
-; rtl~110 ; LCCOMB_X35_Y19_N2  ; 15      ; Global Clock         ; GCLK11           ; --                        ;
+; rtl~0   ; LCCOMB_X36_Y20_N2  ; 15      ; Global Clock         ; GCLK9            ; --                        ;
+; rtl~1   ; LCCOMB_X37_Y23_N0  ; 15      ; Global Clock         ; GCLK11           ; --                        ;
+; rtl~10  ; LCCOMB_X37_Y15_N4  ; 15      ; Global Clock         ; GCLK7            ; --                        ;
+; rtl~100 ; LCCOMB_X24_Y18_N4  ; 15      ; Global Clock         ; GCLK3            ; --                        ;
+; rtl~101 ; LCCOMB_X20_Y18_N6  ; 15      ; Global Clock         ; GCLK1            ; --                        ;
+; rtl~102 ; LCCOMB_X37_Y15_N0  ; 15      ; Global Clock         ; GCLK13           ; --                        ;
+; rtl~103 ; LCCOMB_X37_Y15_N26 ; 15      ; Global Clock         ; GCLK15           ; --                        ;
+; rtl~104 ; LCCOMB_X37_Y15_N16 ; 15      ; Global Clock         ; GCLK12           ; --                        ;
+; rtl~105 ; LCCOMB_X37_Y15_N6  ; 15      ; Global Clock         ; GCLK4            ; --                        ;
+; rtl~106 ; LCCOMB_X37_Y15_N28 ; 15      ; Global Clock         ; GCLK6            ; --                        ;
+; rtl~107 ; LCCOMB_X37_Y15_N24 ; 15      ; Global Clock         ; GCLK5            ; --                        ;
+; rtl~108 ; LCCOMB_X27_Y18_N24 ; 15      ; Global Clock         ; GCLK10           ; --                        ;
+; rtl~109 ; LCCOMB_X20_Y18_N20 ; 15      ; Global Clock         ; GCLK0            ; --                        ;
+; rtl~11  ; LCCOMB_X36_Y19_N0  ; 15      ; Global Clock         ; GCLK8            ; --                        ;
 +---------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1581,7 +1584,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; resultado:RES|Add0~20           ; 477     ;
 ; resultado:RES|Add0~11           ; 464     ;
 ; resultado:RES|Add0~8            ; 463     ;
-; control:CTRL|wr                 ; 264     ;
+; control:CTRL|wr                 ; 274     ;
 ; datos:DAT|dato~360              ; 256     ;
 ; datos:DAT|dato~345              ; 256     ;
 ; datos:DAT|dato~336              ; 256     ;
@@ -1605,13 +1608,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; contMod250:CONT250D|contador[5] ; 127     ;
 ; contMod250:CONT250D|contador[2] ; 126     ;
 ; contMod250:CONT250D|contador[4] ; 113     ;
-; reset                           ; 50      ;
-; clk                             ; 23      ;
-; contMod11:CONT11|contador[1]    ; 21      ;
-; contMod11:CONT11|contador[2]    ; 21      ;
-; control:CTRL|enable11           ; 20      ;
+; reset                           ; 51      ;
+; contMod11:CONT11|contador[1]    ; 23      ;
+; contMod11:CONT11|contador[2]    ; 23      ;
+; contMod11:CONT11|contador[3]    ; 22      ;
 ; contMod11:CONT11|contador[0]    ; 20      ;
-; contMod11:CONT11|contador[3]    ; 20      ;
 ; contMod250:CONT250R|contador[7] ; 20      ;
 ; contMod250:CONT250R|contador[6] ; 20      ;
 ; contMod250:CONT250R|contador[5] ; 20      ;
@@ -1797,6 +1798,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rtl~113                         ; 15      ;
 ; rtl~112                         ; 15      ;
 ; rtl~111                         ; 15      ;
+; rtl~110                         ; 15      ;
 ; rtl~99                          ; 15      ;
 ; rtl~98                          ; 15      ;
 ; rtl~97                          ; 15      ;
@@ -1893,6 +1895,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rtl~4                           ; 15      ;
 ; rtl~3                           ; 15      ;
 ; rtl~2                           ; 15      ;
+; clk                             ; 9       ;
+; control:CTRL|enable250d         ; 8       ;
 ; contMod250:CONT250D|LessThan1~1 ; 8       ;
 ; contMod250:CONT250R|LessThan1~1 ; 8       ;
 ; resultado:RES|LessThan0~1       ; 8       ;
@@ -1913,6 +1917,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; resultado:RES|res~4689          ; 6       ;
 ; resultado:RES|res~4009          ; 6       ;
 ; ~GND                            ; 4       ;
+; control:CTRL|enable11           ; 4       ;
 ; Mux34~0                         ; 4       ;
 ; resultado:RES|cont[7]           ; 3       ;
 ; resultado:RES|cont[6]           ; 3       ;
@@ -2571,8 +2576,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; resultado:RES|res~2157          ; 2       ;
 ; resultado:RES|res~1977          ; 2       ;
 ; resultado:RES|res~2037          ; 2       ;
-; resultado:RES|res~2097          ; 2       ;
-; resultado:RES|res~2637          ; 2       ;
 +---------------------------------+---------+
 
 
@@ -2581,152 +2584,153 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+--------------------------+
 ; Other Routing Resource Type ; Usage                    ;
 +-----------------------------+--------------------------+
-; Block interconnects         ; 11,832 / 94,460 ( 13 % ) ;
-; C16 interconnects           ; 454 / 3,315 ( 14 % )     ;
-; C4 interconnects            ; 9,156 / 60,840 ( 15 % )  ;
-; Direct links                ; 807 / 94,460 ( < 1 % )   ;
+; Block interconnects         ; 11,880 / 94,460 ( 13 % ) ;
+; C16 interconnects           ; 419 / 3,315 ( 13 % )     ;
+; C4 interconnects            ; 9,163 / 60,840 ( 15 % )  ;
+; Direct links                ; 797 / 94,460 ( < 1 % )   ;
 ; Global clocks               ; 16 / 16 ( 100 % )        ;
-; Local interconnects         ; 5,381 / 33,216 ( 16 % )  ;
-; R24 interconnects           ; 492 / 3,091 ( 16 % )     ;
-; R4 interconnects            ; 11,322 / 81,294 ( 14 % ) ;
+; Local interconnects         ; 5,301 / 33,216 ( 16 % )  ;
+; R24 interconnects           ; 458 / 3,091 ( 15 % )     ;
+; R4 interconnects            ; 11,344 / 81,294 ( 14 % ) ;
 +-----------------------------+--------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 14.61) ; Number of LABs  (Total = 491) ;
+; Number of Logic Elements  (Average = 14.64) ; Number of LABs  (Total = 490) ;
 +---------------------------------------------+-------------------------------+
 ; 1                                           ; 12                            ;
-; 2                                           ; 6                             ;
-; 3                                           ; 5                             ;
-; 4                                           ; 6                             ;
+; 2                                           ; 11                            ;
+; 3                                           ; 0                             ;
+; 4                                           ; 3                             ;
 ; 5                                           ; 2                             ;
-; 6                                           ; 7                             ;
-; 7                                           ; 0                             ;
+; 6                                           ; 1                             ;
+; 7                                           ; 5                             ;
 ; 8                                           ; 4                             ;
-; 9                                           ; 2                             ;
-; 10                                          ; 5                             ;
-; 11                                          ; 4                             ;
-; 12                                          ; 5                             ;
-; 13                                          ; 7                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 9                             ;
+; 11                                          ; 5                             ;
+; 12                                          ; 4                             ;
+; 13                                          ; 8                             ;
 ; 14                                          ; 14                            ;
-; 15                                          ; 24                            ;
-; 16                                          ; 388                           ;
+; 15                                          ; 17                            ;
+; 16                                          ; 392                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.03) ; Number of LABs  (Total = 491) ;
+; LAB-wide Signals  (Average = 0.03) ; Number of LABs  (Total = 490) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 6                             ;
-; 1 Clock                            ; 7                             ;
-; 1 Clock enable                     ; 4                             ;
+; 1 Async. clear                     ; 7                             ;
+; 1 Clock                            ; 6                             ;
+; 1 Clock enable                     ; 2                             ;
+; 2 Clocks                           ; 1                             ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 14.71) ; Number of LABs  (Total = 491) ;
+; Number of Signals Sourced  (Average = 14.75) ; Number of LABs  (Total = 490) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 12                            ;
-; 2                                            ; 6                             ;
-; 3                                            ; 5                             ;
-; 4                                            ; 6                             ;
+; 1                                            ; 11                            ;
+; 2                                            ; 12                            ;
+; 3                                            ; 0                             ;
+; 4                                            ; 3                             ;
 ; 5                                            ; 2                             ;
-; 6                                            ; 7                             ;
-; 7                                            ; 0                             ;
+; 6                                            ; 1                             ;
+; 7                                            ; 5                             ;
 ; 8                                            ; 4                             ;
-; 9                                            ; 2                             ;
-; 10                                           ; 5                             ;
+; 9                                            ; 3                             ;
+; 10                                           ; 9                             ;
 ; 11                                           ; 4                             ;
-; 12                                           ; 5                             ;
-; 13                                           ; 7                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 8                             ;
 ; 14                                           ; 14                            ;
-; 15                                           ; 24                            ;
-; 16                                           ; 381                           ;
-; 17                                           ; 2                             ;
+; 15                                           ; 18                            ;
+; 16                                           ; 387                           ;
+; 17                                           ; 1                             ;
 ; 18                                           ; 0                             ;
 ; 19                                           ; 0                             ;
 ; 20                                           ; 0                             ;
-; 21                                           ; 1                             ;
+; 21                                           ; 0                             ;
 ; 22                                           ; 0                             ;
 ; 23                                           ; 0                             ;
-; 24                                           ; 2                             ;
-; 25                                           ; 0                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 1                             ;
 ; 26                                           ; 0                             ;
 ; 27                                           ; 0                             ;
 ; 28                                           ; 0                             ;
-; 29                                           ; 2                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 9.64) ; Number of LABs  (Total = 491) ;
+; Number of Signals Sourced Out  (Average = 9.54) ; Number of LABs  (Total = 490) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 28                            ;
-; 2                                               ; 15                            ;
-; 3                                               ; 19                            ;
-; 4                                               ; 27                            ;
-; 5                                               ; 32                            ;
-; 6                                               ; 28                            ;
-; 7                                               ; 47                            ;
-; 8                                               ; 30                            ;
-; 9                                               ; 25                            ;
-; 10                                              ; 23                            ;
-; 11                                              ; 18                            ;
-; 12                                              ; 21                            ;
-; 13                                              ; 20                            ;
-; 14                                              ; 26                            ;
-; 15                                              ; 29                            ;
-; 16                                              ; 102                           ;
-; 17                                              ; 1                             ;
+; 1                                               ; 31                            ;
+; 2                                               ; 13                            ;
+; 3                                               ; 13                            ;
+; 4                                               ; 30                            ;
+; 5                                               ; 27                            ;
+; 6                                               ; 39                            ;
+; 7                                               ; 50                            ;
+; 8                                               ; 25                            ;
+; 9                                               ; 30                            ;
+; 10                                              ; 16                            ;
+; 11                                              ; 22                            ;
+; 12                                              ; 28                            ;
+; 13                                              ; 15                            ;
+; 14                                              ; 17                            ;
+; 15                                              ; 46                            ;
+; 16                                              ; 88                            ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 21.61) ; Number of LABs  (Total = 491) ;
+; Number of Distinct Inputs  (Average = 21.82) ; Number of LABs  (Total = 490) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 10                            ;
-; 3                                            ; 3                             ;
-; 4                                            ; 3                             ;
-; 5                                            ; 4                             ;
-; 6                                            ; 6                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 7                             ;
-; 9                                            ; 2                             ;
-; 10                                           ; 3                             ;
-; 11                                           ; 8                             ;
-; 12                                           ; 5                             ;
+; 2                                            ; 6                             ;
+; 3                                            ; 4                             ;
+; 4                                            ; 11                            ;
+; 5                                            ; 2                             ;
+; 6                                            ; 7                             ;
+; 7                                            ; 5                             ;
+; 8                                            ; 3                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 1                             ;
+; 11                                           ; 12                            ;
+; 12                                           ; 2                             ;
 ; 13                                           ; 9                             ;
-; 14                                           ; 12                            ;
-; 15                                           ; 20                            ;
-; 16                                           ; 18                            ;
-; 17                                           ; 30                            ;
-; 18                                           ; 28                            ;
-; 19                                           ; 16                            ;
-; 20                                           ; 26                            ;
-; 21                                           ; 23                            ;
-; 22                                           ; 15                            ;
-; 23                                           ; 15                            ;
-; 24                                           ; 18                            ;
-; 25                                           ; 11                            ;
-; 26                                           ; 16                            ;
-; 27                                           ; 15                            ;
-; 28                                           ; 29                            ;
-; 29                                           ; 50                            ;
-; 30                                           ; 86                            ;
+; 14                                           ; 10                            ;
+; 15                                           ; 11                            ;
+; 16                                           ; 22                            ;
+; 17                                           ; 16                            ;
+; 18                                           ; 44                            ;
+; 19                                           ; 19                            ;
+; 20                                           ; 25                            ;
+; 21                                           ; 19                            ;
+; 22                                           ; 11                            ;
+; 23                                           ; 18                            ;
+; 24                                           ; 14                            ;
+; 25                                           ; 13                            ;
+; 26                                           ; 20                            ;
+; 27                                           ; 24                            ;
+; 28                                           ; 22                            ;
+; 29                                           ; 52                            ;
+; 30                                           ; 88                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2764,29 +2768,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk             ; control:CTRL|wr      ; 5898.6            ;
+; clk             ; control:CTRL|wr      ; 6106.5            ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                               ;
-+---------------------------------+-----------------------+-------------------+
-; Source Register                 ; Destination Register  ; Delay Added in ns ;
-+---------------------------------+-----------------------+-------------------+
-; contMod250:CONT250R|contador[4] ; resultado:RES|res~719 ; 4.067             ;
-; contMod250:CONT250R|contador[2] ; resultado:RES|res~719 ; 4.043             ;
-; contMod250:CONT250R|contador[1] ; resultado:RES|res~689 ; 4.043             ;
-; contMod250:CONT250R|contador[0] ; resultado:RES|res~719 ; 4.028             ;
-; contMod250:CONT250R|contador[6] ; resultado:RES|res~719 ; 4.021             ;
-; contMod250:CONT250R|contador[7] ; resultado:RES|res~719 ; 4.021             ;
-; contMod250:CONT250R|contador[3] ; resultado:RES|res~719 ; 4.009             ;
-; contMod250:CONT250R|contador[5] ; resultado:RES|res~719 ; 3.898             ;
-; control:CTRL|wr                 ; datout3[6]            ; 3.708             ;
-; clk                             ; resultado:RES|res~719 ; 0.126             ;
-+---------------------------------+-----------------------+-------------------+
-Note: This table only shows the top 10 path(s) that have the largest delay added for hold.
++------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                ;
++---------------------------------+------------------------+-------------------+
+; Source Register                 ; Destination Register   ; Delay Added in ns ;
++---------------------------------+------------------------+-------------------+
+; control:CTRL|wr                 ; resultado:RES|cont[7]  ; 4.285             ;
+; contMod250:CONT250R|contador[4] ; resultado:RES|res~3629 ; 4.237             ;
+; contMod250:CONT250R|contador[6] ; resultado:RES|res~3629 ; 4.203             ;
+; contMod250:CONT250R|contador[7] ; resultado:RES|res~3629 ; 4.203             ;
+; contMod250:CONT250R|contador[5] ; resultado:RES|res~3629 ; 4.101             ;
+; contMod250:CONT250R|contador[1] ; resultado:RES|res~1528 ; 3.943             ;
+; contMod250:CONT250R|contador[2] ; resultado:RES|res~3239 ; 3.914             ;
+; contMod250:CONT250R|contador[0] ; resultado:RES|res~3329 ; 3.910             ;
+; contMod250:CONT250R|contador[3] ; resultado:RES|res~1528 ; 3.893             ;
++---------------------------------+------------------------+-------------------+
+Note: This table only shows the top 9 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2809,6 +2812,18 @@ Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk_50m (placed in PIN N2 (CLK0, LVDSCLK0p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node clk 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node contMod250:CONT250R|contador[0]
+        Info (176357): Destination node contMod250:CONT250R|contador[1]
+        Info (176357): Destination node contMod250:CONT250R|contador[2]
+        Info (176357): Destination node contMod250:CONT250R|contador[3]
+        Info (176357): Destination node contMod250:CONT250R|contador[4]
+        Info (176357): Destination node contMod250:CONT250R|contador[5]
+        Info (176357): Destination node contMod250:CONT250R|contador[6]
+        Info (176357): Destination node contMod250:CONT250R|contador[7]
+        Info (176357): Destination node clkl
 Info (176353): Automatically promoted node rtl~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node rtl~1 
@@ -2837,25 +2852,23 @@ Info (176353): Automatically promoted node rtl~109
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node rtl~11 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node rtl~110 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:10
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:43
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:42
 Info (170193): Fitter routing operations beginning
-Info (170089): 6e+03 ns of routing delay (approximately 7.7% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
+Info (170089): 6e+03 ns of routing delay (approximately 8.0% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 12% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 63% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
-Info (170194): Fitter routing operations ending: elapsed time is 00:02:47
+    Info (170196): Router estimated peak interconnect usage is 64% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
+Info (170194): Fitter routing operations ending: elapsed time is 00:02:45
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 37.54 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 38.15 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 66 output pins without output pin load capacitance assignment
     Info (306007): Pin "resetl" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2927,14 +2940,14 @@ Warning (306006): Found 66 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:24
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:23
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/aleatana/Documents/pt/trans/Paso0/output_file/trans.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Wed Jan 23 16:43:16 2019
+    Info: Peak virtual memory: 529 megabytes
+    Info: Processing ended: Thu Jan 24 11:35:45 2019
     Info: Elapsed time: 00:04:38
-    Info: Total CPU time (on all processors): 00:04:37
+    Info: Total CPU time (on all processors): 00:04:35
 
 
 +----------------------------+

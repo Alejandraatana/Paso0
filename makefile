@@ -1,7 +1,7 @@
 #Alejandra Rodriguez Sanchez Ing. en Computacion
 all:tb_trans
 
-tb_trans:bib_mult.o datos.o resultado.o coeficientes.o contMod11.o contMod250.o control.o trans.o tb_trans.o
+tb_trans:bib_mult.o datos.o resultado.o coeficientes.o buffDat.o contMod11.o contMod250.o control.o trans.o tb_trans.o
 	ghdl -e --ieee=synopsys tb_trans 
 	./tb_trans --stop-time=60500ns --vcd=tb_trans.vcd
 	gtkwave tb_trans.vcd ondas.sav
@@ -32,6 +32,9 @@ contMod250.o:contMod250.vhdl
 
 coeficientes.o:coeficientes.vhdl
 	ghdl -a --ieee=synopsys coeficientes.vhdl
+	
+buffDat.o:buffDat.vhdl
+	ghdl -a --ieee=synopsys buffDat.vhdl
 	
 clean:
 	rm *.o tb_trans *.vcd *.cf
