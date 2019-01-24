@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="trans">
+		<CBX_INST_ENTRY INSTANCE_NAME="|trans|datos:DAT|altsyncram:dato_rtl_0" CBX_FILE_NAME="altsyncram_3571.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|trans|operaciones:OPE|lpm_mult:Mult0" CBX_FILE_NAME="mult_l8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|trans|resultado:RES|altsyncram:res_rtl_0" CBX_FILE_NAME="altsyncram_pai1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -14,6 +14,8 @@ port(
  enable250d: out std_logic;
  enable250r: out std_logic;
  enablebuff: out std_logic;
+  enableope: out std_logic;
+   resetope: out std_logic;
          wr: out std_logic
     );
 end entity control;
@@ -34,6 +36,8 @@ process(clk,reset)
       enable250d<='0';
       enable250r<='0';
       enablebuff<='0';
+      enableope<='0';
+      resetope<='0';
       ini<='0';
     elsif clk'event and clk='1' then
       if cont<10 then
@@ -43,13 +47,17 @@ process(clk,reset)
              enable250d<='1';
              enable250r<='0';
              enablebuff<='1';
+             enableope<='0';
+             resetope<='0';
              ini<='0';
-         else
+         else 
              wr<='0';
              enable11<='1';
              enable250d<='0';
              enable250r<='0';
              enablebuff<='0';
+             enableope<='1';
+             resetope<='1';
          end if;
       else
          wr<='1';
@@ -57,6 +65,8 @@ process(clk,reset)
          enable250d<='0';
          enable250r<='1';
          enablebuff<='0';
+         enableope<='0';
+         resetope<='1';
          ini<='1';
       end if;
     end if;
