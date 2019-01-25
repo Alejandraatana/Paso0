@@ -22,6 +22,7 @@ end entity control;
 
 architecture beh of control is
 signal cont:integer range 0 to 10:=0;
+signal contd:integer range 0 to 2:=0;
 signal ini:std_logic:='1';
 
 begin
@@ -39,6 +40,7 @@ process(clk,reset)
       enableope<='0';
       resetope<='0';
       ini<='0';
+      contd<=0;
     elsif clk'event and clk='1' then
       if cont<10 then
          if ini='1' then 
@@ -57,17 +59,17 @@ process(clk,reset)
              enable250r<='0';
              enablebuff<='0';
              enableope<='1';
-             resetope<='1';
+             resetope<='1'; 
          end if;
       else
          wr<='1';
          enable11<='0';
          enable250d<='0';
-         enable250r<='1';
          enablebuff<='0';
          enableope<='0';
          resetope<='1';
          ini<='1';
+         enable250r<='1';
       end if;
     end if;
 end process;
