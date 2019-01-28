@@ -9,6 +9,7 @@ entity resultado is
             clk: in std_logic;
             din: in std_logic_vector(39 downto 0);
             add: in std_logic_vector(7 downto 0);
+         addout: in std_logic_vector(7 downto 0);
              wr: in std_logic;
            dout:out std_logic_vector(39 downto 0)
        );
@@ -24,5 +25,5 @@ begin
       res(to_integer(unsigned(add)))<=din;
     end if;
    end process;
-   dout<=res(to_integer(unsigned(add)));
+   dout<=res(to_integer(unsigned(addout)));
 end architecture beh;

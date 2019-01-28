@@ -36,6 +36,7 @@ component resultado is
             clk: in std_logic; 
             din: in std_logic_vector(39 downto 0);
             add: in std_logic_vector(7 downto 0);
+         addout: in std_logic_vector(7 downto 0);
              wr: in std_logic;
            dout:out std_logic_vector(39 downto 0)
        );
@@ -103,6 +104,17 @@ port(
     );
 end component operaciones;
 
+component ffD is
+port(
+          clk: in std_logic;
+        reset: in std_logic;
+       enable: in std_logic;
+            d: in std_logic_vector(7 downto 0);
+            q:out std_logic_vector(7 downto 0)
+    );
+end component ffD;
+
+
 
 signal dato:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
 signal resul:std_logic_vector(39 downto 0):="0000000000000000000000000000000000000000";
@@ -113,6 +125,7 @@ signal dout:std_logic_vector(39 downto 0);
 signal conta11:std_logic_vector(3 downto 0):="0000";
 signal conta250d:std_logic_vector(7 downto 0):="00000000";
 signal conta250r:std_logic_vector(7 downto 0):="00000000";
+signal addout:std_logic_vector(7 downto 0):="00000000";
 signal enable11:std_logic;
 signal enable250d:std_logic;
 signal enable250r:std_logic; 
@@ -133,7 +146,7 @@ datout6<=bin2seg(dout(27 downto 24));
 datout7<=bin2seg(dout(31 downto 28));
 clkl<=clk;
 resetl<=enable250r;
-add<=conta250r;
+add<=addout;
 
 process(clk_50m,reset)
     variable cuenta:natural range 0 to 50000000:=0;
@@ -161,9 +174,18 @@ port map(
         clk=>clk,
         din=>resul,
         add=>conta250r,
+     addout=>addout,
          wr=>wri,
        dout=>dout
         );
+FlFlD:ffD
+port map(
+          clk=>clk,
+        reset=>reset,
+       enable=>wri,
+            d=>conta250r,
+            q=>addout
+    );
 
 CONT11:contMod11
 port map(

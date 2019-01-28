@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trans
-Mon Jan 28 10:50:34 2019
+Mon Jan 28 11:53:06 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -56,15 +56,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 28 10:50:34 2019              ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 28 11:53:06 2019              ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; trans                                              ;
 ; Top-level Entity Name              ; trans                                              ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 594                                                ;
-;     Total combinational functions  ; 375                                                ;
-;     Dedicated logic registers      ; 320                                                ;
-; Total registers                    ; 320                                                ;
+; Total logic elements               ; 602                                                ;
+;     Total combinational functions  ; 367                                                ;
+;     Dedicated logic registers      ; 336                                                ;
+; Total registers                    ; 336                                                ;
 ; Total pins                         ; 68                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 12,288                                             ;
@@ -184,6 +184,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; coeficientes.vhdl                   ; yes             ; User VHDL File                                        ; /home/aleatana/Documents/pt/trans/Paso0/coeficientes.vhdl                           ;         ;
 ; buffDat.vhdl                        ; yes             ; User VHDL File                                        ; /home/aleatana/Documents/pt/trans/Paso0/buffDat.vhdl                                ;         ;
 ; operaciones.vhdl                    ; yes             ; User VHDL File                                        ; /home/aleatana/Documents/pt/trans/Paso0/operaciones.vhdl                            ;         ;
+; ffD.vhdl                            ; yes             ; User VHDL File                                        ; /home/aleatana/Documents/pt/trans/Paso0/ffD.vhdl                                    ;         ;
 ; altsyncram.tdf                      ; yes             ; Megafunction                                          ; /home/aleatana/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc               ; yes             ; Megafunction                                          ; /home/aleatana/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                         ; yes             ; Megafunction                                          ; /home/aleatana/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -210,29 +211,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 594   ;
+; Estimated Total logic elements              ; 602   ;
 ;                                             ;       ;
-; Total combinational functions               ; 375   ;
+; Total combinational functions               ; 367   ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 228   ;
 ;     -- 3 input functions                    ; 75    ;
-;     -- <=2 input functions                  ; 72    ;
+;     -- <=2 input functions                  ; 64    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 305   ;
+;     -- normal mode                          ; 297   ;
 ;     -- arithmetic mode                      ; 70    ;
 ;                                             ;       ;
-; Total registers                             ; 320   ;
-;     -- Dedicated logic registers            ; 320   ;
+; Total registers                             ; 336   ;
+;     -- Dedicated logic registers            ; 336   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 68    ;
 ; Total memory bits                           ; 12288 ;
 ; Embedded Multiplier 9-bit elements          ; 2     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 342   ;
-; Total fan-out                               ; 3311  ;
-; Average fan-out                             ; 4.07  ;
+; Maximum fan-out                             ; 358   ;
+; Total fan-out                               ; 3081  ;
+; Average fan-out                             ; 3.75  ;
 +---------------------------------------------+-------+
 
 
@@ -241,20 +242,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; |trans                                    ; 375 (90)          ; 320 (27)     ; 12288       ; 2            ; 0       ; 1         ; 68   ; 0            ; |trans                                                                   ; work         ;
+; |trans                                    ; 367 (90)          ; 336 (27)     ; 12288       ; 2            ; 0       ; 1         ; 68   ; 0            ; |trans                                                                   ; work         ;
 ;    |buffDat:BUFF|                         ; 114 (114)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|buffDat:BUFF                                                      ; work         ;
 ;    |coeficientes:COE|                     ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|coeficientes:COE                                                  ; work         ;
 ;    |contMod11:CONT11|                     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod11:CONT11                                                  ; work         ;
 ;    |contMod250:CONT250D|                  ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250D                                               ; work         ;
-;    |contMod250:CONT250R|                  ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250R                                               ; work         ;
+;    |contMod250:CONT250R|                  ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|contMod250:CONT250R                                               ; work         ;
 ;    |control:CTRL|                         ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|control:CTRL                                                      ; work         ;
 ;    |datos:DAT|                            ; 16 (16)           ; 1 (1)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT                                                         ; work         ;
 ;       |altsyncram:dato_rtl_0|             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT|altsyncram:dato_rtl_0                                   ; work         ;
 ;          |altsyncram_3571:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|datos:DAT|altsyncram:dato_rtl_0|altsyncram_3571:auto_generated    ; work         ;
+;    |ffD:FlFlD|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|ffD:FlFlD                                                         ; work         ;
 ;    |operaciones:OPE|                      ; 32 (32)           ; 32 (32)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |trans|operaciones:OPE                                                   ; work         ;
 ;       |lpm_mult:Mult0|                    ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |trans|operaciones:OPE|lpm_mult:Mult0                                    ; work         ;
 ;          |mult_l8t:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |trans|operaciones:OPE|lpm_mult:Mult0|mult_l8t:auto_generated            ; work         ;
-;    |resultado:RES|                        ; 72 (72)           ; 74 (74)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES                                                     ; work         ;
+;    |resultado:RES|                        ; 72 (72)           ; 82 (82)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES                                                     ; work         ;
 ;       |altsyncram:res_rtl_0|              ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES|altsyncram:res_rtl_0                                ; work         ;
 ;          |altsyncram_1rd1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |trans|resultado:RES|altsyncram:res_rtl_0|altsyncram_1rd1:auto_generated ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
@@ -289,24 +291,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; control:CTRL|enableope                 ; Merged with control:CTRL|enable11           ;
-; control:CTRL|enablebuff                ; Merged with control:CTRL|enable250d         ;
-; resultado:RES|res_rtl_0_bypass[2]      ; Merged with contMod250:CONT250R|contador[0] ;
-; resultado:RES|res_rtl_0_bypass[4]      ; Merged with contMod250:CONT250R|contador[1] ;
-; resultado:RES|res_rtl_0_bypass[6]      ; Merged with contMod250:CONT250R|contador[2] ;
-; resultado:RES|res_rtl_0_bypass[8]      ; Merged with contMod250:CONT250R|contador[3] ;
-; resultado:RES|res_rtl_0_bypass[10]     ; Merged with contMod250:CONT250R|contador[4] ;
-; resultado:RES|res_rtl_0_bypass[12]     ; Merged with contMod250:CONT250R|contador[5] ;
-; resultado:RES|res_rtl_0_bypass[14]     ; Merged with contMod250:CONT250R|contador[6] ;
-; resultado:RES|res_rtl_0_bypass[16]     ; Merged with contMod250:CONT250R|contador[7] ;
-; operaciones:OPE|res[32..39]            ; Lost fanout                                 ;
-; Total Number of Removed Registers = 18 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                           ;
++----------------------------------------+-------------------------------------+
+; Register name                          ; Reason for Removal                  ;
++----------------------------------------+-------------------------------------+
+; control:CTRL|enableope                 ; Merged with control:CTRL|enable11   ;
+; control:CTRL|enablebuff                ; Merged with control:CTRL|enable250d ;
+; operaciones:OPE|res[32..39]            ; Lost fanout                         ;
+; Total Number of Removed Registers = 10 ;                                     ;
++----------------------------------------+-------------------------------------+
 
 
 +------------------------------------------------------+
@@ -314,12 +308,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 320   ;
+; Total registers                              ; 336   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 245   ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 261   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 248   ;
+; Number of registers using Clock Enable       ; 264   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -673,7 +667,7 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Mon Jan 28 10:50:24 2019
+    Info: Processing started: Mon Jan 28 11:52:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trans -c trans
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file trans.vhdl
@@ -706,10 +700,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file buffDat
 Info (12021): Found 2 design units, including 1 entities, in source file operaciones.vhdl
     Info (12022): Found design unit 1: operaciones-beh
     Info (12023): Found entity 1: operaciones
+Info (12021): Found 2 design units, including 1 entities, in source file ffD.vhdl
+    Info (12022): Found design unit 1: ffD-beh
+    Info (12023): Found entity 1: ffD
 Info (12127): Elaborating entity "trans" for the top level hierarchy
 Info (12128): Elaborating entity "datos" for hierarchy "datos:DAT"
 Info (12128): Elaborating entity "resultado" for hierarchy "resultado:RES"
-Warning (10492): VHDL Process Statement warning at resultado.vhdl(23): signal "wr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at resultado.vhdl(24): signal "wr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ffD" for hierarchy "ffD:FlFlD"
+Warning (10492): VHDL Process Statement warning at ffD.vhdl(27): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "contMod11" for hierarchy "contMod11:CONT11"
 Info (12128): Elaborating entity "contMod250" for hierarchy "contMod250:CONT250D"
 Info (12128): Elaborating entity "control" for hierarchy "control:CTRL"
@@ -808,9 +807,9 @@ Info (21057): Implemented 758 device resources after synthesis - the final resou
     Info (21061): Implemented 640 logic cells
     Info (21064): Implemented 48 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 387 megabytes
-    Info: Processing ended: Mon Jan 28 10:50:34 2019
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 381 megabytes
+    Info: Processing ended: Mon Jan 28 11:53:06 2019
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:10
 

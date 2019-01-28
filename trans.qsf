@@ -13,6 +13,7 @@ set_global_assignment -name VHDL_FILE contMod250.vhdl
 set_global_assignment -name VHDL_FILE coeficientes.vhdl
 set_global_assignment -name VHDL_FILE buffDat.vhdl
 set_global_assignment -name VHDL_FILE operaciones.vhdl
+set_global_assignment -name VHDL_FILE ffD.vhdl
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_file
 
 set_location_assignment  PIN_N2 -to clk_50m
