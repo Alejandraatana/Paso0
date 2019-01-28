@@ -35,11 +35,10 @@ process(clk,reset)
       wr<='0';
       enable11<='0';
       enable250d<='0';
-      enable250r<='0';
       enablebuff<='0';
       enableope<='0';
       resetope<='0';
-      ini<='0';
+      ini<='1';
       contd<=0;
     elsif clk'event and clk='1' then
       if cont<10 then

@@ -22,14 +22,14 @@ signal multiplicacion:std_logic_vector(31 downto 0);
 begin
 
 resultado<=res;
+multiplicacion<=std_logic_vector(unsigned(coef) * unsigned(senal));
 
 process(clk,reset)
     begin
       if reset='0' then
-         multiplicacion<="00000000000000000000000000000000";
+         --multiplicacion<="00000000000000000000000000000000";
          res<="0000000000000000000000000000000000000000";
       elsif clk'event and clk='1' and enable='1' then
-         multiplicacion<=std_logic_vector(unsigned(coef) * unsigned(senal));
          res<=std_logic_vector(unsigned(res) + unsigned(multiplicacion));
       end if;
 end process;

@@ -17,7 +17,6 @@ end entity resultado;
 architecture beh of resultado is
 type dat is array (0 to 255) of std_logic_vector(39 downto 0);
 signal res: dat;
---signal cont:integer range 0 to 255:=0;
 begin
     process(clk)
     begin
